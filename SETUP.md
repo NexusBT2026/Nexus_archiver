@@ -242,7 +242,24 @@ from src.archiver.comprehensive_archiver import ComprehensiveArchiver
 
 archiver = ComprehensiveArchiver()
 archiver.export_to_csv('hyperliquid', 'BTC', '1h', 'btc_1h.csv')
+
+---
+
+## Customizing the Batch File (Windows)
+
+If you use the provided `run_daily_archive.bat` to automate daily archiving on Windows, you **must edit two lines** to match your own folder and environment:
+
+- `cd /d "C:\Users\Warshawski\nexus_archiver"` (line 10): Change this to the folder where you cloned the repo.
+- `call C:\Users\Warshawski\anaconda3\Scripts\activate.bat nexus_archiver` (line 13): Change this to your own Python/conda environment activation command, or remove it if not needed.
+
+Example:
+
+```bat
+cd /d C:\Path\To\Your\Repo
+call C:\Path\To\Your\PythonEnv\Scripts\activate.bat your_env_name
 ```
+
+If you use a virtualenv or no environment at all, adjust or remove the activation line as needed. The batch file must be tailored to your system paths for correct operation.
 
 ---
 
