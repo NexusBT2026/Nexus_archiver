@@ -1,0 +1,52 @@
+# ─────────────────────────────────────────────────────────────
+#  .dockerignore — files excluded from the Docker build context
+# ─────────────────────────────────────────────────────────────
+
+# Python virtual environments
+.conda/
+venv/
+.venv/
+env/
+
+# Byte-compiled / cached files
+__pycache__/
+*.py[cod]
+*.pyo
+*.pyd
+*.egg-info/
+dist/
+build/
+
+# Database (mounted as a volume at runtime — never bake into image)
+archived_data/
+*.db
+*.db-shm
+*.db-wal
+
+# Secrets (mounted as a volume at runtime — never bake into image)
+config.json
+
+# Large raw market dumps (excluded from git too)
+markets_info/**/*_markets.json
+
+# Git
+.git/
+.gitignore
+
+# Editor / OS
+.vscode/
+.idea/
+*.swp
+*.swo
+.DS_Store
+Thumbs.db
+
+# Logs
+*.log
+logs/
+
+# Docs / extras not needed in image
+README.md
+EXCHANGE_RESTRICTIONS.md
+LICENSE
+*.example

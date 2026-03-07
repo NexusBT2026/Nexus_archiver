@@ -1,0 +1,73 @@
+# Python
+__pycache__/
+*.py[cod]
+*$py.class
+*.so
+.Python
+build/
+develop-eggs/
+dist/
+downloads/
+eggs/
+.eggs/
+lib/
+lib64/
+parts/
+sdist/
+var/
+wheels/
+*.egg-info/
+.installed.cfg
+*.egg
+MANIFEST
+
+# Virtual Environment
+venv/
+ENV/
+env/
+.venv
+.conda/
+conda-env/
+
+# IDE
+.vscode/
+.idea/
+*.swp
+*.swo
+*~
+
+# Config files with secrets
+config.json
+
+# Database files
+*.db
+*.sqlite
+*.sqlite3
+
+# Archived data (runtime — regenerated on first run)
+archived_data/*.db
+archived_data/*.sqlite
+archived_data/*.db-journal
+archived_data/*.db-wal
+archived_data/*.db-shm
+
+# API monitoring runtime output
+data/
+
+# Large raw market dumps (> 5 MB each, regenerate using a CCXT script)
+# The compact *_loads_data_bot.json files are retained for symbol discovery
+markets_info/**/*_markets.json
+
+# Logs
+*.log
+error_log.txt
+
+# OS
+.DS_Store
+Thumbs.db
+desktop.ini
+
+# Temporary files
+*.tmp
+*.temp
+.cache/

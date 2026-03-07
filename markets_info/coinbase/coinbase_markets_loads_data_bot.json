@@ -1,0 +1,3433 @@
+{
+  "symbols": [
+    {
+      "id": "BTC-USDC",
+      "precision_amount": 1e-08,
+      "precision_price": 0.01,
+      "quote_min_size": "1",
+      "quote_max_size": "150000000",
+      "base_increment": "0.00000001",
+      "quote_increment": "0.01"
+    },
+    {
+      "id": "ETH-USDC",
+      "precision_amount": 1e-08,
+      "precision_price": 0.01,
+      "quote_min_size": "1",
+      "quote_max_size": "150000000",
+      "base_increment": "0.00000001",
+      "quote_increment": "0.01"
+    },
+    {
+      "id": "XRP-USDC",
+      "precision_amount": 1e-06,
+      "precision_price": 0.0001,
+      "quote_min_size": "1",
+      "quote_max_size": "10000000",
+      "base_increment": "0.000001",
+      "quote_increment": "0.0001"
+    },
+    {
+      "id": "SOL-USDC",
+      "precision_amount": 1e-08,
+      "precision_price": 0.01,
+      "quote_min_size": "1",
+      "quote_max_size": "25000000",
+      "base_increment": "0.00000001",
+      "quote_increment": "0.01"
+    },
+    {
+      "id": "DOGE-USDC",
+      "precision_amount": 0.1,
+      "precision_price": 1e-05,
+      "quote_min_size": "1",
+      "quote_max_size": "10000000",
+      "base_increment": "0.1",
+      "quote_increment": "0.00001"
+    },
+    {
+      "id": "ZEC-USDC",
+      "precision_amount": 1e-08,
+      "precision_price": 0.01,
+      "quote_min_size": "1",
+      "quote_max_size": "10000000",
+      "base_increment": "0.00000001",
+      "quote_increment": "0.01"
+    },
+    {
+      "id": "SUI-USDC",
+      "precision_amount": 0.1,
+      "precision_price": 0.0001,
+      "quote_min_size": "1",
+      "quote_max_size": "10000000",
+      "base_increment": "0.1",
+      "quote_increment": "0.0001"
+    },
+    {
+      "id": "ADA-USDC",
+      "precision_amount": 1e-08,
+      "precision_price": 0.0001,
+      "quote_min_size": "1",
+      "quote_max_size": "10000000",
+      "base_increment": "0.00000001",
+      "quote_increment": "0.0001"
+    },
+    {
+      "id": "LINK-USDC",
+      "precision_amount": 0.01,
+      "precision_price": 0.001,
+      "quote_min_size": "1",
+      "quote_max_size": "10000000",
+      "base_increment": "0.01",
+      "quote_increment": "0.001"
+    },
+    {
+      "id": "VVV-USDC",
+      "precision_amount": 0.001,
+      "precision_price": 0.0001,
+      "quote_min_size": "1",
+      "quote_max_size": "10000000",
+      "base_increment": "0.001",
+      "quote_increment": "0.0001"
+    },
+    {
+      "id": "HBAR-USDC",
+      "precision_amount": 0.1,
+      "precision_price": 1e-05,
+      "quote_min_size": "1",
+      "quote_max_size": "10000000",
+      "base_increment": "0.1",
+      "quote_increment": "0.00001"
+    },
+    {
+      "id": "LTC-USDC",
+      "precision_amount": 1e-08,
+      "precision_price": 0.01,
+      "quote_min_size": "1",
+      "quote_max_size": "10000000",
+      "base_increment": "0.00000001",
+      "quote_increment": "0.01"
+    },
+    {
+      "id": "XLM-USDC",
+      "precision_amount": 1e-08,
+      "precision_price": 1e-06,
+      "quote_min_size": "1",
+      "quote_max_size": "10000000",
+      "base_increment": "0.00000001",
+      "quote_increment": "0.000001"
+    },
+    {
+      "id": "TAO-USDC",
+      "precision_amount": 0.0001,
+      "precision_price": 0.01,
+      "quote_min_size": "1",
+      "quote_max_size": "10000000",
+      "base_increment": "0.0001",
+      "quote_increment": "0.01"
+    },
+    {
+      "id": "AVAX-USDC",
+      "precision_amount": 1e-08,
+      "precision_price": 0.01,
+      "quote_min_size": "1",
+      "quote_max_size": "10000000",
+      "base_increment": "0.00000001",
+      "quote_increment": "0.01"
+    },
+    {
+      "id": "BCH-USDC",
+      "precision_amount": 1e-08,
+      "precision_price": 0.01,
+      "quote_min_size": "1",
+      "quote_max_size": "10000000",
+      "base_increment": "0.00000001",
+      "quote_increment": "0.01"
+    },
+    {
+      "id": "EDGE-USDC",
+      "precision_amount": 0.1,
+      "precision_price": 1e-05,
+      "quote_min_size": "1",
+      "quote_max_size": "10000000",
+      "base_increment": "0.1",
+      "quote_increment": "0.00001"
+    },
+    {
+      "id": "PAXG-USDC",
+      "precision_amount": 1e-05,
+      "precision_price": 0.01,
+      "quote_min_size": "1",
+      "quote_max_size": "10000000",
+      "base_increment": "0.00001",
+      "quote_increment": "0.01"
+    },
+    {
+      "id": "NEAR-USDC",
+      "precision_amount": 0.001,
+      "precision_price": 0.001,
+      "quote_min_size": "1",
+      "quote_max_size": "10000000",
+      "base_increment": "0.001",
+      "quote_increment": "0.001"
+    },
+    {
+      "id": "PENGU-USDC",
+      "precision_amount": 1.0,
+      "precision_price": 1e-06,
+      "quote_min_size": "1",
+      "quote_max_size": "10000000",
+      "base_increment": "1",
+      "quote_increment": "0.000001"
+    },
+    {
+      "id": "HYPE-USDC",
+      "precision_amount": 0.001,
+      "precision_price": 0.01,
+      "quote_min_size": "1",
+      "quote_max_size": "10000000",
+      "base_increment": "0.001",
+      "quote_increment": "0.01"
+    },
+    {
+      "id": "FARTCOIN-USDC",
+      "precision_amount": 0.01,
+      "precision_price": 0.0001,
+      "quote_min_size": "1",
+      "quote_max_size": "10000000",
+      "base_increment": "0.01",
+      "quote_increment": "0.0001"
+    },
+    {
+      "id": "ONDO-USDC",
+      "precision_amount": 0.01,
+      "precision_price": 1e-05,
+      "quote_min_size": "1",
+      "quote_max_size": "10000000",
+      "base_increment": "0.01",
+      "quote_increment": "0.00001"
+    },
+    {
+      "id": "MON-USDC",
+      "precision_amount": 1.0,
+      "precision_price": 1e-05,
+      "quote_min_size": "1",
+      "quote_max_size": "10000000",
+      "base_increment": "1",
+      "quote_increment": "0.00001"
+    },
+    {
+      "id": "PEPE-USDC",
+      "precision_amount": 1.0,
+      "precision_price": 1e-08,
+      "quote_min_size": "1",
+      "quote_max_size": "10000000",
+      "base_increment": "1",
+      "quote_increment": "0.00000001"
+    },
+    {
+      "id": "AAVE-USDC",
+      "precision_amount": 0.001,
+      "precision_price": 0.01,
+      "quote_min_size": "1",
+      "quote_max_size": "10000000",
+      "base_increment": "0.001",
+      "quote_increment": "0.01"
+    },
+    {
+      "id": "ZRO-USDC",
+      "precision_amount": 0.01,
+      "precision_price": 0.001,
+      "quote_min_size": "1",
+      "quote_max_size": "10000000",
+      "base_increment": "0.01",
+      "quote_increment": "0.001"
+    },
+    {
+      "id": "PUMP-USDC",
+      "precision_amount": 1.0,
+      "precision_price": 1e-06,
+      "quote_min_size": "1",
+      "quote_max_size": "10000000",
+      "base_increment": "1",
+      "quote_increment": "0.000001"
+    },
+    {
+      "id": "AERO-USDC",
+      "precision_amount": 0.1,
+      "precision_price": 1e-05,
+      "quote_min_size": "1",
+      "quote_max_size": "10000000",
+      "base_increment": "0.1",
+      "quote_increment": "0.00001"
+    },
+    {
+      "id": "BONK-USDC",
+      "precision_amount": 1.0,
+      "precision_price": 1e-08,
+      "quote_min_size": "1",
+      "quote_max_size": "10000000",
+      "base_increment": "1",
+      "quote_increment": "0.00000001"
+    },
+    {
+      "id": "UNI-USDC",
+      "precision_amount": 1e-06,
+      "precision_price": 0.001,
+      "quote_min_size": "1",
+      "quote_max_size": "10000000",
+      "base_increment": "0.000001",
+      "quote_increment": "0.001"
+    },
+    {
+      "id": "ROBO-USDC",
+      "precision_amount": 1.0,
+      "precision_price": 1e-05,
+      "quote_min_size": "1",
+      "quote_max_size": "10000000",
+      "base_increment": "1",
+      "quote_increment": "0.00001"
+    },
+    {
+      "id": "EURC-USDC",
+      "precision_amount": 1.0,
+      "precision_price": 0.0001,
+      "quote_min_size": "2",
+      "quote_max_size": "10000000",
+      "base_increment": "1",
+      "quote_increment": "0.0001"
+    },
+    {
+      "id": "DOT-USDC",
+      "precision_amount": 1e-08,
+      "precision_price": 0.001,
+      "quote_min_size": "1",
+      "quote_max_size": "10000000",
+      "base_increment": "0.00000001",
+      "quote_increment": "0.001"
+    },
+    {
+      "id": "ICP-USDC",
+      "precision_amount": 0.0001,
+      "precision_price": 0.001,
+      "quote_min_size": "1",
+      "quote_max_size": "10000000",
+      "base_increment": "0.0001",
+      "quote_increment": "0.001"
+    },
+    {
+      "id": "SKY-USDC",
+      "precision_amount": 0.1,
+      "precision_price": 1e-05,
+      "quote_min_size": "1",
+      "quote_max_size": "10000000",
+      "base_increment": "0.1",
+      "quote_increment": "0.00001"
+    },
+    {
+      "id": "WLFI-USDC",
+      "precision_amount": 0.1,
+      "precision_price": 1e-05,
+      "quote_min_size": "1",
+      "quote_max_size": "10000000",
+      "base_increment": "0.1",
+      "quote_increment": "0.00001"
+    },
+    {
+      "id": "CRV-USDC",
+      "precision_amount": 0.01,
+      "precision_price": 0.0001,
+      "quote_min_size": "1",
+      "quote_max_size": "10000000",
+      "base_increment": "0.01",
+      "quote_increment": "0.0001"
+    },
+    {
+      "id": "USELESS-USDC",
+      "precision_amount": 0.1,
+      "precision_price": 0.0001,
+      "quote_min_size": "1",
+      "quote_max_size": "10000000",
+      "base_increment": "0.1",
+      "quote_increment": "0.0001"
+    },
+    {
+      "id": "ENA-USDC",
+      "precision_amount": 0.1,
+      "precision_price": 0.0001,
+      "quote_min_size": "1",
+      "quote_max_size": "10000000",
+      "base_increment": "0.1",
+      "quote_increment": "0.0001"
+    },
+    {
+      "id": "RENDER-USDC",
+      "precision_amount": 0.01,
+      "precision_price": 0.001,
+      "quote_min_size": "1",
+      "quote_max_size": "10000000",
+      "base_increment": "0.01",
+      "quote_increment": "0.001"
+    },
+    {
+      "id": "BNB-USDC",
+      "precision_amount": 1e-05,
+      "precision_price": 0.01,
+      "quote_min_size": "1",
+      "quote_max_size": "10000000",
+      "base_increment": "0.00001",
+      "quote_increment": "0.01"
+    },
+    {
+      "id": "DASH-USDC",
+      "precision_amount": 1e-08,
+      "precision_price": 0.01,
+      "quote_min_size": "1",
+      "quote_max_size": "10000000",
+      "base_increment": "0.00000001",
+      "quote_increment": "0.01"
+    },
+    {
+      "id": "CFG-USDC",
+      "precision_amount": 0.1,
+      "precision_price": 0.0001,
+      "quote_min_size": "1",
+      "quote_max_size": "10000000",
+      "base_increment": "0.1",
+      "quote_increment": "0.0001"
+    },
+    {
+      "id": "LIGHTER-USDC",
+      "precision_amount": 0.01,
+      "precision_price": 0.001,
+      "quote_min_size": "1",
+      "quote_max_size": "10000000",
+      "base_increment": "0.01",
+      "quote_increment": "0.001"
+    },
+    {
+      "id": "FET-USDC",
+      "precision_amount": 0.1,
+      "precision_price": 0.0001,
+      "quote_min_size": "1",
+      "quote_max_size": "10000000",
+      "base_increment": "0.1",
+      "quote_increment": "0.0001"
+    },
+    {
+      "id": "IOTX-USDC",
+      "precision_amount": 1.0,
+      "precision_price": 1e-05,
+      "quote_min_size": "1",
+      "quote_max_size": "10000000",
+      "base_increment": "1",
+      "quote_increment": "0.00001"
+    },
+    {
+      "id": "SPX-USDC",
+      "precision_amount": 0.01,
+      "precision_price": 0.0001,
+      "quote_min_size": "1",
+      "quote_max_size": "10000000",
+      "base_increment": "0.01",
+      "quote_increment": "0.0001"
+    },
+    {
+      "id": "IP-USDC",
+      "precision_amount": 0.01,
+      "precision_price": 0.001,
+      "quote_min_size": "1",
+      "quote_max_size": "10000000",
+      "base_increment": "0.01",
+      "quote_increment": "0.001"
+    },
+    {
+      "id": "BNKR-USDC",
+      "precision_amount": 1.0,
+      "precision_price": 1e-07,
+      "quote_min_size": "1",
+      "quote_max_size": "10000000",
+      "base_increment": "1",
+      "quote_increment": "0.0000001"
+    },
+    {
+      "id": "APT-USDC",
+      "precision_amount": 0.001,
+      "precision_price": 0.0001,
+      "quote_min_size": "1",
+      "quote_max_size": "10000000",
+      "base_increment": "0.001",
+      "quote_increment": "0.0001"
+    },
+    {
+      "id": "USDT-USDC",
+      "precision_amount": 0.01,
+      "precision_price": 0.0001,
+      "quote_min_size": "1",
+      "quote_max_size": "10000000",
+      "base_increment": "0.01",
+      "quote_increment": "0.0001"
+    },
+    {
+      "id": "JASMY-USDC",
+      "precision_amount": 1.0,
+      "precision_price": 1e-05,
+      "quote_min_size": "1",
+      "quote_max_size": "10000000",
+      "base_increment": "1",
+      "quote_increment": "0.00001"
+    },
+    {
+      "id": "WIF-USDC",
+      "precision_amount": 0.01,
+      "precision_price": 0.001,
+      "quote_min_size": "1",
+      "quote_max_size": "10000000",
+      "base_increment": "0.01",
+      "quote_increment": "0.001"
+    },
+    {
+      "id": "MORPHO-USDC",
+      "precision_amount": 0.01,
+      "precision_price": 0.0001,
+      "quote_min_size": "1",
+      "quote_max_size": "10000000",
+      "base_increment": "0.01",
+      "quote_increment": "0.0001"
+    },
+    {
+      "id": "XPL-USDC",
+      "precision_amount": 0.1,
+      "precision_price": 0.0001,
+      "quote_min_size": "1",
+      "quote_max_size": "10000000",
+      "base_increment": "0.1",
+      "quote_increment": "0.0001"
+    },
+    {
+      "id": "CBETH-USDC",
+      "precision_amount": 1e-05,
+      "precision_price": 0.01,
+      "quote_min_size": "1",
+      "quote_max_size": "10000000",
+      "base_increment": "0.00001",
+      "quote_increment": "0.01"
+    },
+    {
+      "id": "FAI-USDC",
+      "precision_amount": 1.0,
+      "precision_price": 1e-05,
+      "quote_min_size": "1",
+      "quote_max_size": "10000000",
+      "base_increment": "1",
+      "quote_increment": "0.00001"
+    },
+    {
+      "id": "SKR-USDC",
+      "precision_amount": 1.0,
+      "precision_price": 1e-05,
+      "quote_min_size": "1",
+      "quote_max_size": "10000000",
+      "base_increment": "1",
+      "quote_increment": "0.00001"
+    },
+    {
+      "id": "SHIB-USDC",
+      "precision_amount": 1.0,
+      "precision_price": 1e-08,
+      "quote_min_size": "1",
+      "quote_max_size": "10000000",
+      "base_increment": "1",
+      "quote_increment": "0.00000001"
+    },
+    {
+      "id": "INJ-USDC",
+      "precision_amount": 0.01,
+      "precision_price": 0.001,
+      "quote_min_size": "1",
+      "quote_max_size": "10000000",
+      "base_increment": "0.01",
+      "quote_increment": "0.001"
+    },
+    {
+      "id": "BAL-USDC",
+      "precision_amount": 0.001,
+      "precision_price": 0.0001,
+      "quote_min_size": "1",
+      "quote_max_size": "10000000",
+      "base_increment": "0.001",
+      "quote_increment": "0.0001"
+    },
+    {
+      "id": "RAVE-USDC",
+      "precision_amount": 0.1,
+      "precision_price": 0.0001,
+      "quote_min_size": "1",
+      "quote_max_size": "10000000",
+      "base_increment": "0.1",
+      "quote_increment": "0.0001"
+    },
+    {
+      "id": "ARB-USDC",
+      "precision_amount": 0.01,
+      "precision_price": 0.0001,
+      "quote_min_size": "1",
+      "quote_max_size": "10000000",
+      "base_increment": "0.01",
+      "quote_increment": "0.0001"
+    },
+    {
+      "id": "ZORA-USDC",
+      "precision_amount": 1.0,
+      "precision_price": 1e-05,
+      "quote_min_size": "1",
+      "quote_max_size": "10000000",
+      "base_increment": "1",
+      "quote_increment": "0.00001"
+    },
+    {
+      "id": "SYRUP-USDC",
+      "precision_amount": 0.1,
+      "precision_price": 0.0001,
+      "quote_min_size": "1",
+      "quote_max_size": "10000000",
+      "base_increment": "0.1",
+      "quote_increment": "0.0001"
+    },
+    {
+      "id": "KITE-USDC",
+      "precision_amount": 0.1,
+      "precision_price": 1e-05,
+      "quote_min_size": "1",
+      "quote_max_size": "10000000",
+      "base_increment": "0.1",
+      "quote_increment": "0.00001"
+    },
+    {
+      "id": "SEI-USDC",
+      "precision_amount": 0.1,
+      "precision_price": 1e-05,
+      "quote_min_size": "1",
+      "quote_max_size": "10000000",
+      "base_increment": "0.1",
+      "quote_increment": "0.00001"
+    },
+    {
+      "id": "STRK-USDC",
+      "precision_amount": 0.01,
+      "precision_price": 0.001,
+      "quote_min_size": "1",
+      "quote_max_size": "10000000",
+      "base_increment": "0.01",
+      "quote_increment": "0.001"
+    },
+    {
+      "id": "POL-USDC",
+      "precision_amount": 0.01,
+      "precision_price": 0.0001,
+      "quote_min_size": "1",
+      "quote_max_size": "10000000",
+      "base_increment": "0.01",
+      "quote_increment": "0.0001"
+    },
+    {
+      "id": "ATOM-USDC",
+      "precision_amount": 0.01,
+      "precision_price": 0.001,
+      "quote_min_size": "1",
+      "quote_max_size": "10000000",
+      "base_increment": "0.01",
+      "quote_increment": "0.001"
+    },
+    {
+      "id": "COOKIE-USDC",
+      "precision_amount": 0.1,
+      "precision_price": 1e-05,
+      "quote_min_size": "1",
+      "quote_max_size": "10000000",
+      "base_increment": "0.1",
+      "quote_increment": "0.00001"
+    },
+    {
+      "id": "WLD-USDC",
+      "precision_amount": 0.01,
+      "precision_price": 0.0001,
+      "quote_min_size": "1",
+      "quote_max_size": "10000000",
+      "base_increment": "0.01",
+      "quote_increment": "0.0001"
+    },
+    {
+      "id": "FIL-USDC",
+      "precision_amount": 0.001,
+      "precision_price": 0.001,
+      "quote_min_size": "1",
+      "quote_max_size": "10000000",
+      "base_increment": "0.001",
+      "quote_increment": "0.001"
+    },
+    {
+      "id": "TOSHI-USDC",
+      "precision_amount": 1.0,
+      "precision_price": 1e-07,
+      "quote_min_size": "1",
+      "quote_max_size": "10000000",
+      "base_increment": "1",
+      "quote_increment": "0.0000001"
+    },
+    {
+      "id": "MOODENG-USDC",
+      "precision_amount": 0.01,
+      "precision_price": 0.0001,
+      "quote_min_size": "1",
+      "quote_max_size": "10000000",
+      "base_increment": "0.01",
+      "quote_increment": "0.0001"
+    },
+    {
+      "id": "PNG-USDC",
+      "precision_amount": 1.0,
+      "precision_price": 1e-05,
+      "quote_min_size": "1",
+      "quote_max_size": "10000000",
+      "base_increment": "1",
+      "quote_increment": "0.00001"
+    },
+    {
+      "id": "COW-USDC",
+      "precision_amount": 0.1,
+      "precision_price": 0.0001,
+      "quote_min_size": "1",
+      "quote_max_size": "10000000",
+      "base_increment": "0.1",
+      "quote_increment": "0.0001"
+    },
+    {
+      "id": "POPCAT-USDC",
+      "precision_amount": 0.01,
+      "precision_price": 0.0001,
+      "quote_min_size": "1",
+      "quote_max_size": "10000000",
+      "base_increment": "0.01",
+      "quote_increment": "0.0001"
+    },
+    {
+      "id": "ETC-USDC",
+      "precision_amount": 1e-08,
+      "precision_price": 0.01,
+      "quote_min_size": "1",
+      "quote_max_size": "10000000",
+      "base_increment": "0.00000001",
+      "quote_increment": "0.01"
+    },
+    {
+      "id": "CVX-USDC",
+      "precision_amount": 0.001,
+      "precision_price": 0.001,
+      "quote_min_size": "1",
+      "quote_max_size": "10000000",
+      "base_increment": "0.001",
+      "quote_increment": "0.001"
+    },
+    {
+      "id": "VET-USDC",
+      "precision_amount": 1.0,
+      "precision_price": 1e-05,
+      "quote_min_size": "1",
+      "quote_max_size": "10000000",
+      "base_increment": "1",
+      "quote_increment": "0.00001"
+    },
+    {
+      "id": "ALGO-USDC",
+      "precision_amount": 0.1,
+      "precision_price": 0.0001,
+      "quote_min_size": "1",
+      "quote_max_size": "10000000",
+      "base_increment": "0.1",
+      "quote_increment": "0.0001"
+    },
+    {
+      "id": "USD1-USDC",
+      "precision_amount": 0.01,
+      "precision_price": 0.0001,
+      "quote_min_size": "1",
+      "quote_max_size": "10000000",
+      "base_increment": "0.01",
+      "quote_increment": "0.0001"
+    },
+    {
+      "id": "CRO-USDC",
+      "precision_amount": 0.1,
+      "precision_price": 1e-05,
+      "quote_min_size": "1",
+      "quote_max_size": "10000000",
+      "base_increment": "0.1",
+      "quote_increment": "0.00001"
+    },
+    {
+      "id": "PIRATE-USDC",
+      "precision_amount": 0.1,
+      "precision_price": 0.0001,
+      "quote_min_size": "1",
+      "quote_max_size": "10000000",
+      "base_increment": "0.1",
+      "quote_increment": "0.0001"
+    },
+    {
+      "id": "BARD-USDC",
+      "precision_amount": 0.01,
+      "precision_price": 0.0001,
+      "quote_min_size": "1",
+      "quote_max_size": "10000000",
+      "base_increment": "0.01",
+      "quote_increment": "0.0001"
+    },
+    {
+      "id": "TIA-USDC",
+      "precision_amount": 0.01,
+      "precision_price": 0.0001,
+      "quote_min_size": "1",
+      "quote_max_size": "10000000",
+      "base_increment": "0.01",
+      "quote_increment": "0.0001"
+    },
+    {
+      "id": "BERA-USDC",
+      "precision_amount": 0.01,
+      "precision_price": 0.001,
+      "quote_min_size": "1",
+      "quote_max_size": "10000000",
+      "base_increment": "0.01",
+      "quote_increment": "0.001"
+    },
+    {
+      "id": "BIO-USDC",
+      "precision_amount": 0.1,
+      "precision_price": 1e-05,
+      "quote_min_size": "1",
+      "quote_max_size": "10000000",
+      "base_increment": "0.1",
+      "quote_increment": "0.00001"
+    },
+    {
+      "id": "AVNT-USDC",
+      "precision_amount": 0.1,
+      "precision_price": 0.0001,
+      "quote_min_size": "1",
+      "quote_max_size": "10000000",
+      "base_increment": "0.1",
+      "quote_increment": "0.0001"
+    },
+    {
+      "id": "OP-USDC",
+      "precision_amount": 0.01,
+      "precision_price": 0.001,
+      "quote_min_size": "1",
+      "quote_max_size": "10000000",
+      "base_increment": "0.01",
+      "quote_increment": "0.001"
+    },
+    {
+      "id": "ROSE-USDC",
+      "precision_amount": 0.1,
+      "precision_price": 1e-05,
+      "quote_min_size": "1",
+      "quote_max_size": "10000000",
+      "base_increment": "0.1",
+      "quote_increment": "0.00001"
+    },
+    {
+      "id": "TRUMP-USDC",
+      "precision_amount": 0.001,
+      "precision_price": 0.01,
+      "quote_min_size": "1",
+      "quote_max_size": "10000000",
+      "base_increment": "0.001",
+      "quote_increment": "0.01"
+    },
+    {
+      "id": "IMX-USDC",
+      "precision_amount": 0.01,
+      "precision_price": 0.0001,
+      "quote_min_size": "1",
+      "quote_max_size": "10000000",
+      "base_increment": "0.01",
+      "quote_increment": "0.0001"
+    },
+    {
+      "id": "AZTEC-USDC",
+      "precision_amount": 1.0,
+      "precision_price": 1e-05,
+      "quote_min_size": "1",
+      "quote_max_size": "10000000",
+      "base_increment": "1",
+      "quote_increment": "0.00001"
+    },
+    {
+      "id": "XTZ-USDC",
+      "precision_amount": 0.01,
+      "precision_price": 0.0001,
+      "quote_min_size": "1",
+      "quote_max_size": "10000000",
+      "base_increment": "0.01",
+      "quote_increment": "0.0001"
+    },
+    {
+      "id": "KAITO-USDC",
+      "precision_amount": 0.01,
+      "precision_price": 0.0001,
+      "quote_min_size": "1",
+      "quote_max_size": "10000000",
+      "base_increment": "0.01",
+      "quote_increment": "0.0001"
+    },
+    {
+      "id": "STX-USDC",
+      "precision_amount": 0.01,
+      "precision_price": 0.0001,
+      "quote_min_size": "1",
+      "quote_max_size": "10000000",
+      "base_increment": "0.01",
+      "quote_increment": "0.0001"
+    },
+    {
+      "id": "FIGHT-USDC",
+      "precision_amount": 1.0,
+      "precision_price": 1e-05,
+      "quote_min_size": "1",
+      "quote_max_size": "10000000",
+      "base_increment": "1",
+      "quote_increment": "0.00001"
+    },
+    {
+      "id": "ORCA-USDC",
+      "precision_amount": 0.01,
+      "precision_price": 0.0001,
+      "quote_min_size": "1",
+      "quote_max_size": "10000000",
+      "base_increment": "0.01",
+      "quote_increment": "0.0001"
+    },
+    {
+      "id": "ASTER-USDC",
+      "precision_amount": 0.01,
+      "precision_price": 0.001,
+      "quote_min_size": "1",
+      "quote_max_size": "10000000",
+      "base_increment": "0.01",
+      "quote_increment": "0.001"
+    },
+    {
+      "id": "HNT-USDC",
+      "precision_amount": 0.01,
+      "precision_price": 0.001,
+      "quote_min_size": "1",
+      "quote_max_size": "10000000",
+      "base_increment": "0.01",
+      "quote_increment": "0.001"
+    },
+    {
+      "id": "XCN-USDC",
+      "precision_amount": 0.1,
+      "precision_price": 1e-05,
+      "quote_min_size": "1",
+      "quote_max_size": "10000000",
+      "base_increment": "0.1",
+      "quote_increment": "0.00001"
+    },
+    {
+      "id": "ACH-USDC",
+      "precision_amount": 0.1,
+      "precision_price": 1e-06,
+      "quote_min_size": "1",
+      "quote_max_size": "10000000",
+      "base_increment": "0.1",
+      "quote_increment": "0.000001"
+    },
+    {
+      "id": "WET-USDC",
+      "precision_amount": 0.1,
+      "precision_price": 0.0001,
+      "quote_min_size": "1",
+      "quote_max_size": "10000000",
+      "base_increment": "0.1",
+      "quote_increment": "0.0001"
+    },
+    {
+      "id": "AKT-USDC",
+      "precision_amount": 0.01,
+      "precision_price": 0.001,
+      "quote_min_size": "1",
+      "quote_max_size": "10000000",
+      "base_increment": "0.01",
+      "quote_increment": "0.001"
+    },
+    {
+      "id": "KAVA-USDC",
+      "precision_amount": 0.01,
+      "precision_price": 0.0001,
+      "quote_min_size": "1",
+      "quote_max_size": "10000000",
+      "base_increment": "0.01",
+      "quote_increment": "0.0001"
+    },
+    {
+      "id": "ESP-USDC",
+      "precision_amount": 0.1,
+      "precision_price": 1e-05,
+      "quote_min_size": "1",
+      "quote_max_size": "10000000",
+      "base_increment": "0.1",
+      "quote_increment": "0.00001"
+    },
+    {
+      "id": "CLANKER-USDC",
+      "precision_amount": 0.0001,
+      "precision_price": 0.01,
+      "quote_min_size": "1",
+      "quote_max_size": "10000000",
+      "base_increment": "0.0001",
+      "quote_increment": "0.01"
+    },
+    {
+      "id": "ALLO-USDC",
+      "precision_amount": 0.01,
+      "precision_price": 0.0001,
+      "quote_min_size": "1",
+      "quote_max_size": "10000000",
+      "base_increment": "0.01",
+      "quote_increment": "0.0001"
+    },
+    {
+      "id": "SQD-USDC",
+      "precision_amount": 0.1,
+      "precision_price": 0.0001,
+      "quote_min_size": "1",
+      "quote_max_size": "10000000",
+      "base_increment": "0.1",
+      "quote_increment": "0.0001"
+    },
+    {
+      "id": "JTO-USDC",
+      "precision_amount": 0.1,
+      "precision_price": 0.0001,
+      "quote_min_size": "1",
+      "quote_max_size": "10000000",
+      "base_increment": "0.1",
+      "quote_increment": "0.0001"
+    },
+    {
+      "id": "AXS-USDC",
+      "precision_amount": 0.001,
+      "precision_price": 0.001,
+      "quote_min_size": "1",
+      "quote_max_size": "10000000",
+      "base_increment": "0.001",
+      "quote_increment": "0.001"
+    },
+    {
+      "id": "GST-USDC",
+      "precision_amount": 0.01,
+      "precision_price": 1e-06,
+      "quote_min_size": "1",
+      "quote_max_size": "10000000",
+      "base_increment": "0.01",
+      "quote_increment": "0.000001"
+    },
+    {
+      "id": "SAPIEN-USDC",
+      "precision_amount": 0.1,
+      "precision_price": 1e-05,
+      "quote_min_size": "1",
+      "quote_max_size": "10000000",
+      "base_increment": "0.1",
+      "quote_increment": "0.00001"
+    },
+    {
+      "id": "DOGINME-USDC",
+      "precision_amount": 1.0,
+      "precision_price": 1e-07,
+      "quote_min_size": "1",
+      "quote_max_size": "10000000",
+      "base_increment": "1",
+      "quote_increment": "0.0000001"
+    },
+    {
+      "id": "MOG-USDC",
+      "precision_amount": 1.0,
+      "precision_price": 1e-08,
+      "quote_min_size": "1",
+      "quote_max_size": "10000000",
+      "base_increment": "1",
+      "quote_increment": "0.00000001"
+    },
+    {
+      "id": "SYND-USDC",
+      "precision_amount": 0.01,
+      "precision_price": 0.0001,
+      "quote_min_size": "1",
+      "quote_max_size": "10000000",
+      "base_increment": "0.01",
+      "quote_increment": "0.0001"
+    },
+    {
+      "id": "MANTLE-USDC",
+      "precision_amount": 0.01,
+      "precision_price": 0.0001,
+      "quote_min_size": "1",
+      "quote_max_size": "10000000",
+      "base_increment": "0.01",
+      "quote_increment": "0.0001"
+    },
+    {
+      "id": "FLR-USDC",
+      "precision_amount": 1.0,
+      "precision_price": 1e-05,
+      "quote_min_size": "1",
+      "quote_max_size": "10000000",
+      "base_increment": "1",
+      "quote_increment": "0.00001"
+    },
+    {
+      "id": "QNT-USDC",
+      "precision_amount": 0.001,
+      "precision_price": 0.01,
+      "quote_min_size": "1",
+      "quote_max_size": "10000000",
+      "base_increment": "0.001",
+      "quote_increment": "0.01"
+    },
+    {
+      "id": "TRB-USDC",
+      "precision_amount": 0.001,
+      "precision_price": 0.01,
+      "quote_min_size": "1",
+      "quote_max_size": "10000000",
+      "base_increment": "0.001",
+      "quote_increment": "0.01"
+    },
+    {
+      "id": "BTRST-USDC",
+      "precision_amount": 0.01,
+      "precision_price": 0.001,
+      "quote_min_size": "1",
+      "quote_max_size": "10000000",
+      "base_increment": "0.01",
+      "quote_increment": "0.001"
+    },
+    {
+      "id": "BREV-USDC",
+      "precision_amount": 0.1,
+      "precision_price": 0.0001,
+      "quote_min_size": "1",
+      "quote_max_size": "10000000",
+      "base_increment": "0.1",
+      "quote_increment": "0.0001"
+    },
+    {
+      "id": "TRIA-USDC",
+      "precision_amount": 1.0,
+      "precision_price": 1e-06,
+      "quote_min_size": "1",
+      "quote_max_size": "10000000",
+      "base_increment": "1",
+      "quote_increment": "0.000001"
+    },
+    {
+      "id": "CHZ-USDC",
+      "precision_amount": 0.1,
+      "precision_price": 0.0001,
+      "quote_min_size": "1",
+      "quote_max_size": "10000000",
+      "base_increment": "0.1",
+      "quote_increment": "0.0001"
+    },
+    {
+      "id": "GWEI-USDC",
+      "precision_amount": 1.0,
+      "precision_price": 1e-06,
+      "quote_min_size": "1",
+      "quote_max_size": "10000000",
+      "base_increment": "1",
+      "quote_increment": "0.000001"
+    },
+    {
+      "id": "PROVE-USDC",
+      "precision_amount": 0.01,
+      "precision_price": 0.0001,
+      "quote_min_size": "1",
+      "quote_max_size": "10000000",
+      "base_increment": "0.01",
+      "quote_increment": "0.0001"
+    },
+    {
+      "id": "LDO-USDC",
+      "precision_amount": 0.01,
+      "precision_price": 0.001,
+      "quote_min_size": "1",
+      "quote_max_size": "10000000",
+      "base_increment": "0.01",
+      "quote_increment": "0.001"
+    },
+    {
+      "id": "AMP-USDC",
+      "precision_amount": 1.0,
+      "precision_price": 1e-05,
+      "quote_min_size": "1",
+      "quote_max_size": "10000000",
+      "base_increment": "1",
+      "quote_increment": "0.00001"
+    },
+    {
+      "id": "TREE-USDC",
+      "precision_amount": 0.01,
+      "precision_price": 0.0001,
+      "quote_min_size": "1",
+      "quote_max_size": "10000000",
+      "base_increment": "0.01",
+      "quote_increment": "0.0001"
+    },
+    {
+      "id": "SAND-USDC",
+      "precision_amount": 0.01,
+      "precision_price": 0.0001,
+      "quote_min_size": "1",
+      "quote_max_size": "10000000",
+      "base_increment": "0.01",
+      "quote_increment": "0.0001"
+    },
+    {
+      "id": "PERP-USDC",
+      "precision_amount": 0.001,
+      "precision_price": 0.0001,
+      "quote_min_size": "1",
+      "quote_max_size": "10000000",
+      "base_increment": "0.001",
+      "quote_increment": "0.0001"
+    },
+    {
+      "id": "TON-USDC",
+      "precision_amount": 0.01,
+      "precision_price": 0.001,
+      "quote_min_size": "1",
+      "quote_max_size": "10000000",
+      "base_increment": "0.01",
+      "quote_increment": "0.001"
+    },
+    {
+      "id": "SKL-USDC",
+      "precision_amount": 0.1,
+      "precision_price": 0.0001,
+      "quote_min_size": "1",
+      "quote_max_size": "10000000",
+      "base_increment": "0.1",
+      "quote_increment": "0.0001"
+    },
+    {
+      "id": "LRDS-USDC",
+      "precision_amount": 0.01,
+      "precision_price": 0.0001,
+      "quote_min_size": "1",
+      "quote_max_size": "10000000",
+      "base_increment": "0.01",
+      "quote_increment": "0.0001"
+    },
+    {
+      "id": "ATH-USDC",
+      "precision_amount": 1.0,
+      "precision_price": 1e-05,
+      "quote_min_size": "1",
+      "quote_max_size": "10000000",
+      "base_increment": "1",
+      "quote_increment": "0.00001"
+    },
+    {
+      "id": "BIRB-USDC",
+      "precision_amount": 0.1,
+      "precision_price": 0.0001,
+      "quote_min_size": "1",
+      "quote_max_size": "10000000",
+      "base_increment": "0.1",
+      "quote_increment": "0.0001"
+    },
+    {
+      "id": "KTA-USDC",
+      "precision_amount": 0.1,
+      "precision_price": 0.0001,
+      "quote_min_size": "1",
+      "quote_max_size": "10000000",
+      "base_increment": "0.1",
+      "quote_increment": "0.0001"
+    },
+    {
+      "id": "EUL-USDC",
+      "precision_amount": 0.001,
+      "precision_price": 0.001,
+      "quote_min_size": "1",
+      "quote_max_size": "10000000",
+      "base_increment": "0.001",
+      "quote_increment": "0.001"
+    },
+    {
+      "id": "RED-USDC",
+      "precision_amount": 0.01,
+      "precision_price": 0.0001,
+      "quote_min_size": "1",
+      "quote_max_size": "10000000",
+      "base_increment": "0.01",
+      "quote_increment": "0.0001"
+    },
+    {
+      "id": "YFI-USDC",
+      "precision_amount": 1e-06,
+      "precision_price": 0.01,
+      "quote_min_size": "1",
+      "quote_max_size": "10000000",
+      "base_increment": "0.000001",
+      "quote_increment": "0.01"
+    },
+    {
+      "id": "PENDLE-USDC",
+      "precision_amount": 0.01,
+      "precision_price": 0.001,
+      "quote_min_size": "1",
+      "quote_max_size": "10000000",
+      "base_increment": "0.01",
+      "quote_increment": "0.001"
+    },
+    {
+      "id": "TRUST-USDC",
+      "precision_amount": 0.1,
+      "precision_price": 1e-05,
+      "quote_min_size": "1",
+      "quote_max_size": "10000000",
+      "base_increment": "0.1",
+      "quote_increment": "0.00001"
+    },
+    {
+      "id": "SEAM-USDC",
+      "precision_amount": 0.1,
+      "precision_price": 0.0001,
+      "quote_min_size": "2",
+      "quote_max_size": "10000000",
+      "base_increment": "0.1",
+      "quote_increment": "0.0001"
+    },
+    {
+      "id": "ENS-USDC",
+      "precision_amount": 0.001,
+      "precision_price": 0.01,
+      "quote_min_size": "1",
+      "quote_max_size": "10000000",
+      "base_increment": "0.001",
+      "quote_increment": "0.01"
+    },
+    {
+      "id": "AIOZ-USDC",
+      "precision_amount": 0.1,
+      "precision_price": 0.0001,
+      "quote_min_size": "1",
+      "quote_max_size": "10000000",
+      "base_increment": "0.1",
+      "quote_increment": "0.0001"
+    },
+    {
+      "id": "WELL-USDC",
+      "precision_amount": 1.0,
+      "precision_price": 1e-06,
+      "quote_min_size": "1",
+      "quote_max_size": "10000000",
+      "base_increment": "1",
+      "quote_increment": "0.000001"
+    },
+    {
+      "id": "SNX-USDC",
+      "precision_amount": 0.001,
+      "precision_price": 0.001,
+      "quote_min_size": "1",
+      "quote_max_size": "10000000",
+      "base_increment": "0.001",
+      "quote_increment": "0.001"
+    },
+    {
+      "id": "GFI-USDC",
+      "precision_amount": 0.01,
+      "precision_price": 0.0001,
+      "quote_min_size": "1",
+      "quote_max_size": "10000000",
+      "base_increment": "0.01",
+      "quote_increment": "0.0001"
+    },
+    {
+      "id": "PLUME-USDC",
+      "precision_amount": 1.0,
+      "precision_price": 1e-05,
+      "quote_min_size": "1",
+      "quote_max_size": "10000000",
+      "base_increment": "1",
+      "quote_increment": "0.00001"
+    },
+    {
+      "id": "ZEN-USDC",
+      "precision_amount": 0.001,
+      "precision_price": 0.001,
+      "quote_min_size": "1",
+      "quote_max_size": "10000000",
+      "base_increment": "0.001",
+      "quote_increment": "0.001"
+    },
+    {
+      "id": "S-USDC",
+      "precision_amount": 0.1,
+      "precision_price": 1e-05,
+      "quote_min_size": "1",
+      "quote_max_size": "10000000",
+      "base_increment": "0.1",
+      "quote_increment": "0.00001"
+    },
+    {
+      "id": "MET-USDC",
+      "precision_amount": 0.01,
+      "precision_price": 0.0001,
+      "quote_min_size": "1",
+      "quote_max_size": "10000000",
+      "base_increment": "0.01",
+      "quote_increment": "0.0001"
+    },
+    {
+      "id": "TURBO-USDC",
+      "precision_amount": 1.0,
+      "precision_price": 1e-06,
+      "quote_min_size": "1",
+      "quote_max_size": "10000000",
+      "base_increment": "1",
+      "quote_increment": "0.000001"
+    },
+    {
+      "id": "PROMPT-USDC",
+      "precision_amount": 0.1,
+      "precision_price": 1e-05,
+      "quote_min_size": "1",
+      "quote_max_size": "10000000",
+      "base_increment": "0.1",
+      "quote_increment": "0.00001"
+    },
+    {
+      "id": "SUPER-USDC",
+      "precision_amount": 0.01,
+      "precision_price": 1e-05,
+      "quote_min_size": "1",
+      "quote_max_size": "10000000",
+      "base_increment": "0.01",
+      "quote_increment": "0.00001"
+    },
+    {
+      "id": "UP-USDC",
+      "precision_amount": 0.1,
+      "precision_price": 1e-05,
+      "quote_min_size": "1",
+      "quote_max_size": "10000000",
+      "base_increment": "0.1",
+      "quote_increment": "0.00001"
+    },
+    {
+      "id": "LPT-USDC",
+      "precision_amount": 0.001,
+      "precision_price": 0.01,
+      "quote_min_size": "1",
+      "quote_max_size": "10000000",
+      "base_increment": "0.001",
+      "quote_increment": "0.01"
+    },
+    {
+      "id": "SXT-USDC",
+      "precision_amount": 0.1,
+      "precision_price": 0.0001,
+      "quote_min_size": "1",
+      "quote_max_size": "10000000",
+      "base_increment": "0.1",
+      "quote_increment": "0.0001"
+    },
+    {
+      "id": "JUPITER-USDC",
+      "precision_amount": 0.1,
+      "precision_price": 0.0001,
+      "quote_min_size": "1",
+      "quote_max_size": "10000000",
+      "base_increment": "0.1",
+      "quote_increment": "0.0001"
+    },
+    {
+      "id": "RSR-USDC",
+      "precision_amount": 1.0,
+      "precision_price": 1e-06,
+      "quote_min_size": "1",
+      "quote_max_size": "10000000",
+      "base_increment": "1",
+      "quote_increment": "0.000001"
+    },
+    {
+      "id": "GRT-USDC",
+      "precision_amount": 0.01,
+      "precision_price": 0.0001,
+      "quote_min_size": "1",
+      "quote_max_size": "10000000",
+      "base_increment": "0.01",
+      "quote_increment": "0.0001"
+    },
+    {
+      "id": "HFT-USDC",
+      "precision_amount": 0.01,
+      "precision_price": 0.0001,
+      "quote_min_size": "1",
+      "quote_max_size": "10000000",
+      "base_increment": "0.01",
+      "quote_increment": "0.0001"
+    },
+    {
+      "id": "AGLD-USDC",
+      "precision_amount": 0.01,
+      "precision_price": 0.0001,
+      "quote_min_size": "1",
+      "quote_max_size": "10000000",
+      "base_increment": "0.01",
+      "quote_increment": "0.0001"
+    },
+    {
+      "id": "EIGEN-USDC",
+      "precision_amount": 0.01,
+      "precision_price": 0.001,
+      "quote_min_size": "1",
+      "quote_max_size": "10000000",
+      "base_increment": "0.01",
+      "quote_increment": "0.001"
+    },
+    {
+      "id": "SPK-USDC",
+      "precision_amount": 0.1,
+      "precision_price": 1e-05,
+      "quote_min_size": "1",
+      "quote_max_size": "10000000",
+      "base_increment": "0.1",
+      "quote_increment": "0.00001"
+    },
+    {
+      "id": "ZK-USDC",
+      "precision_amount": 0.1,
+      "precision_price": 1e-05,
+      "quote_min_size": "1",
+      "quote_max_size": "10000000",
+      "base_increment": "0.1",
+      "quote_increment": "0.00001"
+    },
+    {
+      "id": "APE-USDC",
+      "precision_amount": 0.01,
+      "precision_price": 0.001,
+      "quote_min_size": "1",
+      "quote_max_size": "10000000",
+      "base_increment": "0.01",
+      "quote_increment": "0.001"
+    },
+    {
+      "id": "AERGO-USDC",
+      "precision_amount": 0.1,
+      "precision_price": 0.0001,
+      "quote_min_size": "1",
+      "quote_max_size": "10000000",
+      "base_increment": "0.1",
+      "quote_increment": "0.0001"
+    },
+    {
+      "id": "BAT-USDC",
+      "precision_amount": 0.01,
+      "precision_price": 1e-05,
+      "quote_min_size": "1",
+      "quote_max_size": "10000000",
+      "base_increment": "0.01",
+      "quote_increment": "0.00001"
+    },
+    {
+      "id": "NEON-USDC",
+      "precision_amount": 0.01,
+      "precision_price": 1e-05,
+      "quote_min_size": "1",
+      "quote_max_size": "10000000",
+      "base_increment": "0.01",
+      "quote_increment": "0.00001"
+    },
+    {
+      "id": "BOBA-USDC",
+      "precision_amount": 0.1,
+      "precision_price": 0.0001,
+      "quote_min_size": "1",
+      "quote_max_size": "10000000",
+      "base_increment": "0.1",
+      "quote_increment": "0.0001"
+    },
+    {
+      "id": "CTX-USDC",
+      "precision_amount": 0.001,
+      "precision_price": 0.0001,
+      "quote_min_size": "5",
+      "quote_max_size": "10000000",
+      "base_increment": "0.001",
+      "quote_increment": "0.0001"
+    },
+    {
+      "id": "IRYS-USDC",
+      "precision_amount": 1.0,
+      "precision_price": 1e-05,
+      "quote_min_size": "1",
+      "quote_max_size": "10000000",
+      "base_increment": "1",
+      "quote_increment": "0.00001"
+    },
+    {
+      "id": "FUN1-USDC",
+      "precision_amount": 0.1,
+      "precision_price": 1e-05,
+      "quote_min_size": "1",
+      "quote_max_size": "10000000",
+      "base_increment": "0.1",
+      "quote_increment": "0.00001"
+    },
+    {
+      "id": "ZAMA-USDC",
+      "precision_amount": 1.0,
+      "precision_price": 1e-05,
+      "quote_min_size": "1",
+      "quote_max_size": "10000000",
+      "base_increment": "1",
+      "quote_increment": "0.00001"
+    },
+    {
+      "id": "PYTH-USDC",
+      "precision_amount": 0.1,
+      "precision_price": 0.0001,
+      "quote_min_size": "1",
+      "quote_max_size": "10000000",
+      "base_increment": "0.1",
+      "quote_increment": "0.0001"
+    },
+    {
+      "id": "MANA-USDC",
+      "precision_amount": 0.01,
+      "precision_price": 0.0001,
+      "quote_min_size": "1",
+      "quote_max_size": "10000000",
+      "base_increment": "0.01",
+      "quote_increment": "0.0001"
+    },
+    {
+      "id": "AST-USDC",
+      "precision_amount": 0.1,
+      "precision_price": 0.0001,
+      "quote_min_size": "1",
+      "quote_max_size": "10000000",
+      "base_increment": "0.1",
+      "quote_increment": "0.0001"
+    },
+    {
+      "id": "HOPR-USDC",
+      "precision_amount": 0.1,
+      "precision_price": 0.0001,
+      "quote_min_size": "1",
+      "quote_max_size": "10000000",
+      "base_increment": "0.1",
+      "quote_increment": "0.0001"
+    },
+    {
+      "id": "AURORA-USDC",
+      "precision_amount": 0.01,
+      "precision_price": 0.0001,
+      "quote_min_size": "1",
+      "quote_max_size": "10000000",
+      "base_increment": "0.01",
+      "quote_increment": "0.0001"
+    },
+    {
+      "id": "OGN-USDC",
+      "precision_amount": 0.01,
+      "precision_price": 1e-05,
+      "quote_min_size": "1",
+      "quote_max_size": "10000000",
+      "base_increment": "0.01",
+      "quote_increment": "0.00001"
+    },
+    {
+      "id": "KEYCAT-USDC",
+      "precision_amount": 1.0,
+      "precision_price": 1e-06,
+      "quote_min_size": "1",
+      "quote_max_size": "10000000",
+      "base_increment": "1",
+      "quote_increment": "0.000001"
+    },
+    {
+      "id": "UMA-USDC",
+      "precision_amount": 0.001,
+      "precision_price": 0.001,
+      "quote_min_size": "1",
+      "quote_max_size": "10000000",
+      "base_increment": "0.001",
+      "quote_increment": "0.001"
+    },
+    {
+      "id": "COMP-USDC",
+      "precision_amount": 0.001,
+      "precision_price": 0.01,
+      "quote_min_size": "1",
+      "quote_max_size": "10000000",
+      "base_increment": "0.001",
+      "quote_increment": "0.01"
+    },
+    {
+      "id": "PRIME-USDC",
+      "precision_amount": 0.01,
+      "precision_price": 0.001,
+      "quote_min_size": "1",
+      "quote_max_size": "10000000",
+      "base_increment": "0.01",
+      "quote_increment": "0.001"
+    },
+    {
+      "id": "ZKC-USDC",
+      "precision_amount": 0.01,
+      "precision_price": 0.0001,
+      "quote_min_size": "1",
+      "quote_max_size": "10000000",
+      "base_increment": "0.01",
+      "quote_increment": "0.0001"
+    },
+    {
+      "id": "ME-USDC",
+      "precision_amount": 0.01,
+      "precision_price": 0.0001,
+      "quote_min_size": "1",
+      "quote_max_size": "10000000",
+      "base_increment": "0.01",
+      "quote_increment": "0.0001"
+    },
+    {
+      "id": "KMNO-USDC",
+      "precision_amount": 0.1,
+      "precision_price": 1e-05,
+      "quote_min_size": "1",
+      "quote_max_size": "10000000",
+      "base_increment": "0.1",
+      "quote_increment": "0.00001"
+    },
+    {
+      "id": "GIGA-USDC",
+      "precision_amount": 0.1,
+      "precision_price": 1e-05,
+      "quote_min_size": "1",
+      "quote_max_size": "10000000",
+      "base_increment": "0.1",
+      "quote_increment": "0.00001"
+    },
+    {
+      "id": "MNDE-USDC",
+      "precision_amount": 0.1,
+      "precision_price": 1e-05,
+      "quote_min_size": "1",
+      "quote_max_size": "10000000",
+      "base_increment": "0.1",
+      "quote_increment": "0.00001"
+    },
+    {
+      "id": "DNT-USDC",
+      "precision_amount": 0.1,
+      "precision_price": 0.0001,
+      "quote_min_size": "1",
+      "quote_max_size": "10000000",
+      "base_increment": "0.1",
+      "quote_increment": "0.0001"
+    },
+    {
+      "id": "TRAC-USDC",
+      "precision_amount": 0.1,
+      "precision_price": 0.0001,
+      "quote_min_size": "1",
+      "quote_max_size": "10000000",
+      "base_increment": "0.1",
+      "quote_increment": "0.0001"
+    },
+    {
+      "id": "MAMO-USDC",
+      "precision_amount": 0.1,
+      "precision_price": 1e-05,
+      "quote_min_size": "1",
+      "quote_max_size": "10000000",
+      "base_increment": "0.1",
+      "quote_increment": "0.00001"
+    },
+    {
+      "id": "W-USDC",
+      "precision_amount": 0.01,
+      "precision_price": 1e-05,
+      "quote_min_size": "1",
+      "quote_max_size": "10000000",
+      "base_increment": "0.01",
+      "quote_increment": "0.00001"
+    },
+    {
+      "id": "SUSHI-USDC",
+      "precision_amount": 0.01,
+      "precision_price": 0.0001,
+      "quote_min_size": "1",
+      "quote_max_size": "10000000",
+      "base_increment": "0.01",
+      "quote_increment": "0.0001"
+    },
+    {
+      "id": "SENT-USDC",
+      "precision_amount": 1.0,
+      "precision_price": 1e-05,
+      "quote_min_size": "1",
+      "quote_max_size": "10000000",
+      "base_increment": "1",
+      "quote_increment": "0.00001"
+    },
+    {
+      "id": "LQTY-USDC",
+      "precision_amount": 0.01,
+      "precision_price": 0.0001,
+      "quote_min_size": "1",
+      "quote_max_size": "10000000",
+      "base_increment": "0.01",
+      "quote_increment": "0.0001"
+    },
+    {
+      "id": "COTI-USDC",
+      "precision_amount": 0.1,
+      "precision_price": 0.0001,
+      "quote_min_size": "1",
+      "quote_max_size": "10000000",
+      "base_increment": "0.1",
+      "quote_increment": "0.0001"
+    },
+    {
+      "id": "METIS-USDC",
+      "precision_amount": 0.001,
+      "precision_price": 0.01,
+      "quote_min_size": "1",
+      "quote_max_size": "10000000",
+      "base_increment": "0.001",
+      "quote_increment": "0.01"
+    },
+    {
+      "id": "A8-USDC",
+      "precision_amount": 0.01,
+      "precision_price": 0.0001,
+      "quote_min_size": "1",
+      "quote_max_size": "10000000",
+      "base_increment": "0.01",
+      "quote_increment": "0.0001"
+    },
+    {
+      "id": "AWE-USDC",
+      "precision_amount": 0.1,
+      "precision_price": 1e-05,
+      "quote_min_size": "1",
+      "quote_max_size": "10000000",
+      "base_increment": "0.1",
+      "quote_increment": "0.00001"
+    },
+    {
+      "id": "IMU-USDC",
+      "precision_amount": 1.0,
+      "precision_price": 1e-05,
+      "quote_min_size": "1",
+      "quote_max_size": "10000000",
+      "base_increment": "1",
+      "quote_increment": "0.00001"
+    },
+    {
+      "id": "FLOKI-USDC",
+      "precision_amount": 1.0,
+      "precision_price": 1e-07,
+      "quote_min_size": "1",
+      "quote_max_size": "10000000",
+      "base_increment": "1",
+      "quote_increment": "0.0000001"
+    },
+    {
+      "id": "PRO-USDC",
+      "precision_amount": 0.01,
+      "precision_price": 0.0001,
+      "quote_min_size": "1",
+      "quote_max_size": "10000000",
+      "base_increment": "0.01",
+      "quote_increment": "0.0001"
+    },
+    {
+      "id": "LCX-USDC",
+      "precision_amount": 0.1,
+      "precision_price": 0.0001,
+      "quote_min_size": "1",
+      "quote_max_size": "10000000",
+      "base_increment": "0.1",
+      "quote_increment": "0.0001"
+    },
+    {
+      "id": "APR-USDC",
+      "precision_amount": 0.1,
+      "precision_price": 0.0001,
+      "quote_min_size": "1",
+      "quote_max_size": "10000000",
+      "base_increment": "0.1",
+      "quote_increment": "0.0001"
+    },
+    {
+      "id": "BOBBOB-USDC",
+      "precision_amount": 1.0,
+      "precision_price": 1e-05,
+      "quote_min_size": "1",
+      "quote_max_size": "10000000",
+      "base_increment": "1",
+      "quote_increment": "0.00001"
+    },
+    {
+      "id": "DAI-USDC",
+      "precision_amount": 1e-05,
+      "precision_price": 0.0001,
+      "quote_min_size": "1",
+      "quote_max_size": "10000000",
+      "base_increment": "0.00001",
+      "quote_increment": "0.0001"
+    },
+    {
+      "id": "DOOD-USDC",
+      "precision_amount": 1.0,
+      "precision_price": 1e-06,
+      "quote_min_size": "1",
+      "quote_max_size": "10000000",
+      "base_increment": "1",
+      "quote_increment": "0.000001"
+    },
+    {
+      "id": "REZ-USDC",
+      "precision_amount": 1.0,
+      "precision_price": 1e-05,
+      "quote_min_size": "1",
+      "quote_max_size": "10000000",
+      "base_increment": "1",
+      "quote_increment": "0.00001"
+    },
+    {
+      "id": "COSMOSDYDX-USDC",
+      "precision_amount": 0.01,
+      "precision_price": 0.0001,
+      "quote_min_size": "1",
+      "quote_max_size": "10000000",
+      "base_increment": "0.01",
+      "quote_increment": "0.0001"
+    },
+    {
+      "id": "XAN-USDC",
+      "precision_amount": 0.1,
+      "precision_price": 1e-05,
+      "quote_min_size": "1",
+      "quote_max_size": "10000000",
+      "base_increment": "0.1",
+      "quote_increment": "0.00001"
+    },
+    {
+      "id": "JITOSOL-USDC",
+      "precision_amount": 0.0001,
+      "precision_price": 0.01,
+      "quote_min_size": "1",
+      "quote_max_size": "10000000",
+      "base_increment": "0.0001",
+      "quote_increment": "0.01"
+    },
+    {
+      "id": "ZKP-USDC",
+      "precision_amount": 0.1,
+      "precision_price": 1e-05,
+      "quote_min_size": "1",
+      "quote_max_size": "10000000",
+      "base_increment": "0.1",
+      "quote_increment": "0.00001"
+    },
+    {
+      "id": "OMNI-USDC",
+      "precision_amount": 0.01,
+      "precision_price": 0.001,
+      "quote_min_size": "1",
+      "quote_max_size": "10000000",
+      "base_increment": "0.01",
+      "quote_increment": "0.001"
+    },
+    {
+      "id": "RNBW-USDC",
+      "precision_amount": 0.1,
+      "precision_price": 1e-05,
+      "quote_min_size": "1",
+      "quote_max_size": "10000000",
+      "base_increment": "0.1",
+      "quote_increment": "0.00001"
+    },
+    {
+      "id": "RARI-USDC",
+      "precision_amount": 0.001,
+      "precision_price": 0.0001,
+      "quote_min_size": "1",
+      "quote_max_size": "10000000",
+      "base_increment": "0.001",
+      "quote_increment": "0.0001"
+    },
+    {
+      "id": "AXL-USDC",
+      "precision_amount": 0.1,
+      "precision_price": 0.0001,
+      "quote_min_size": "1",
+      "quote_max_size": "10000000",
+      "base_increment": "0.1",
+      "quote_increment": "0.0001"
+    },
+    {
+      "id": "IO-USDC",
+      "precision_amount": 0.01,
+      "precision_price": 0.001,
+      "quote_min_size": "1",
+      "quote_max_size": "10000000",
+      "base_increment": "0.01",
+      "quote_increment": "0.001"
+    },
+    {
+      "id": "GLM-USDC",
+      "precision_amount": 0.1,
+      "precision_price": 0.0001,
+      "quote_min_size": "1",
+      "quote_max_size": "10000000",
+      "base_increment": "0.1",
+      "quote_increment": "0.0001"
+    },
+    {
+      "id": "DEXT-USDC",
+      "precision_amount": 0.1,
+      "precision_price": 0.0001,
+      "quote_min_size": "1",
+      "quote_max_size": "10000000",
+      "base_increment": "0.1",
+      "quote_increment": "0.0001"
+    },
+    {
+      "id": "FLOCK-USDC",
+      "precision_amount": 0.1,
+      "precision_price": 0.0001,
+      "quote_min_size": "1",
+      "quote_max_size": "10000000",
+      "base_increment": "0.1",
+      "quote_increment": "0.0001"
+    },
+    {
+      "id": "RPL-USDC",
+      "precision_amount": 0.001,
+      "precision_price": 0.01,
+      "quote_min_size": "1",
+      "quote_max_size": "10000000",
+      "base_increment": "0.001",
+      "quote_increment": "0.01"
+    },
+    {
+      "id": "NOM-USDC",
+      "precision_amount": 1.0,
+      "precision_price": 1e-05,
+      "quote_min_size": "1",
+      "quote_max_size": "10000000",
+      "base_increment": "1",
+      "quote_increment": "0.00001"
+    },
+    {
+      "id": "NMR-USDC",
+      "precision_amount": 0.001,
+      "precision_price": 0.01,
+      "quote_min_size": "1",
+      "quote_max_size": "10000000",
+      "base_increment": "0.001",
+      "quote_increment": "0.01"
+    },
+    {
+      "id": "ETHFI-USDC",
+      "precision_amount": 0.01,
+      "precision_price": 0.001,
+      "quote_min_size": "1",
+      "quote_max_size": "10000000",
+      "base_increment": "0.01",
+      "quote_increment": "0.001"
+    },
+    {
+      "id": "XYO-USDC",
+      "precision_amount": 0.1,
+      "precision_price": 1e-05,
+      "quote_min_size": "1",
+      "quote_max_size": "10000000",
+      "base_increment": "0.1",
+      "quote_increment": "0.00001"
+    },
+    {
+      "id": "FLUID-USDC",
+      "precision_amount": 0.01,
+      "precision_price": 0.001,
+      "quote_min_size": "1",
+      "quote_max_size": "10000000",
+      "base_increment": "0.01",
+      "quote_increment": "0.001"
+    },
+    {
+      "id": "RONIN-USDC",
+      "precision_amount": 0.01,
+      "precision_price": 0.0001,
+      "quote_min_size": "1",
+      "quote_max_size": "10000000",
+      "base_increment": "0.01",
+      "quote_increment": "0.0001"
+    },
+    {
+      "id": "EGLD-USDC",
+      "precision_amount": 0.001,
+      "precision_price": 0.01,
+      "quote_min_size": "1",
+      "quote_max_size": "10000000",
+      "base_increment": "0.001",
+      "quote_increment": "0.01"
+    },
+    {
+      "id": "DIA-USDC",
+      "precision_amount": 0.01,
+      "precision_price": 1e-05,
+      "quote_min_size": "1",
+      "quote_max_size": "10000000",
+      "base_increment": "0.01",
+      "quote_increment": "0.00001"
+    },
+    {
+      "id": "KNC-USDC",
+      "precision_amount": 0.1,
+      "precision_price": 0.0001,
+      "quote_min_size": "1",
+      "quote_max_size": "10000000",
+      "base_increment": "0.1",
+      "quote_increment": "0.0001"
+    },
+    {
+      "id": "ELSA-USDC",
+      "precision_amount": 0.1,
+      "precision_price": 0.0001,
+      "quote_min_size": "1",
+      "quote_max_size": "10000000",
+      "base_increment": "0.1",
+      "quote_increment": "0.0001"
+    },
+    {
+      "id": "SWFTC-USDC",
+      "precision_amount": 1.0,
+      "precision_price": 1e-06,
+      "quote_min_size": "1",
+      "quote_max_size": "10000000",
+      "base_increment": "1",
+      "quote_increment": "0.000001"
+    },
+    {
+      "id": "MAGIC-USDC",
+      "precision_amount": 0.01,
+      "precision_price": 0.0001,
+      "quote_min_size": "1",
+      "quote_max_size": "10000000",
+      "base_increment": "0.01",
+      "quote_increment": "0.0001"
+    },
+    {
+      "id": "SPA-USDC",
+      "precision_amount": 1.0,
+      "precision_price": 1e-06,
+      "quote_min_size": "1",
+      "quote_max_size": "10000000",
+      "base_increment": "1",
+      "quote_increment": "0.000001"
+    },
+    {
+      "id": "RECALL-USDC",
+      "precision_amount": 0.01,
+      "precision_price": 0.0001,
+      "quote_min_size": "1",
+      "quote_max_size": "10000000",
+      "base_increment": "0.01",
+      "quote_increment": "0.0001"
+    },
+    {
+      "id": "TROLL-USDC",
+      "precision_amount": 0.1,
+      "precision_price": 1e-05,
+      "quote_min_size": "1",
+      "quote_max_size": "10000000",
+      "base_increment": "0.1",
+      "quote_increment": "0.00001"
+    },
+    {
+      "id": "L3-USDC",
+      "precision_amount": 0.1,
+      "precision_price": 1e-05,
+      "quote_min_size": "1",
+      "quote_max_size": "10000000",
+      "base_increment": "0.1",
+      "quote_increment": "0.00001"
+    },
+    {
+      "id": "LINEA-USDC",
+      "precision_amount": 1.0,
+      "precision_price": 1e-05,
+      "quote_min_size": "1",
+      "quote_max_size": "10000000",
+      "base_increment": "1",
+      "quote_increment": "0.00001"
+    },
+    {
+      "id": "STORJ-USDC",
+      "precision_amount": 0.01,
+      "precision_price": 0.0001,
+      "quote_min_size": "1",
+      "quote_max_size": "10000000",
+      "base_increment": "0.01",
+      "quote_increment": "0.0001"
+    },
+    {
+      "id": "VELO-USDC",
+      "precision_amount": 0.1,
+      "precision_price": 1e-05,
+      "quote_min_size": "1",
+      "quote_max_size": "10000000",
+      "base_increment": "0.1",
+      "quote_increment": "0.00001"
+    },
+    {
+      "id": "ALEO-USDC",
+      "precision_amount": 0.01,
+      "precision_price": 0.0001,
+      "quote_min_size": "1",
+      "quote_max_size": "10000000",
+      "base_increment": "0.01",
+      "quote_increment": "0.0001"
+    },
+    {
+      "id": "BLAST-USDC",
+      "precision_amount": 1.0,
+      "precision_price": 1e-05,
+      "quote_min_size": "1",
+      "quote_max_size": "10000000",
+      "base_increment": "1",
+      "quote_increment": "0.00001"
+    },
+    {
+      "id": "API3-USDC",
+      "precision_amount": 0.01,
+      "precision_price": 0.001,
+      "quote_min_size": "5",
+      "quote_max_size": "10000000",
+      "base_increment": "0.01",
+      "quote_increment": "0.001"
+    },
+    {
+      "id": "INX-USDC",
+      "precision_amount": 1.0,
+      "precision_price": 1e-06,
+      "quote_min_size": "1",
+      "quote_max_size": "10000000",
+      "base_increment": "1",
+      "quote_increment": "0.000001"
+    },
+    {
+      "id": "ACS-USDC",
+      "precision_amount": 1.0,
+      "precision_price": 1e-07,
+      "quote_min_size": "1",
+      "quote_max_size": "10000000",
+      "base_increment": "1",
+      "quote_increment": "0.0000001"
+    },
+    {
+      "id": "SUKU-USDC",
+      "precision_amount": 0.1,
+      "precision_price": 0.0001,
+      "quote_min_size": "1",
+      "quote_max_size": "10000000",
+      "base_increment": "0.1",
+      "quote_increment": "0.0001"
+    },
+    {
+      "id": "DEGEN-USDC",
+      "precision_amount": 1.0,
+      "precision_price": 1e-06,
+      "quote_min_size": "1",
+      "quote_max_size": "10000000",
+      "base_increment": "1",
+      "quote_increment": "0.000001"
+    },
+    {
+      "id": "ALICE-USDC",
+      "precision_amount": 0.001,
+      "precision_price": 0.001,
+      "quote_min_size": "1",
+      "quote_max_size": "10000000",
+      "base_increment": "0.001",
+      "quote_increment": "0.001"
+    },
+    {
+      "id": "KSM-USDC",
+      "precision_amount": 0.0001,
+      "precision_price": 0.01,
+      "quote_min_size": "1",
+      "quote_max_size": "10000000",
+      "base_increment": "0.0001",
+      "quote_increment": "0.01"
+    },
+    {
+      "id": "VTHO-USDC",
+      "precision_amount": 1.0,
+      "precision_price": 1e-06,
+      "quote_min_size": "1",
+      "quote_max_size": "10000000",
+      "base_increment": "1",
+      "quote_increment": "0.000001"
+    },
+    {
+      "id": "MINA-USDC",
+      "precision_amount": 0.001,
+      "precision_price": 0.0001,
+      "quote_min_size": "1",
+      "quote_max_size": "10000000",
+      "base_increment": "0.001",
+      "quote_increment": "0.0001"
+    },
+    {
+      "id": "THQ-USDC",
+      "precision_amount": 0.1,
+      "precision_price": 1e-05,
+      "quote_min_size": "1",
+      "quote_max_size": "10000000",
+      "base_increment": "0.1",
+      "quote_increment": "0.00001"
+    },
+    {
+      "id": "ASM-USDC",
+      "precision_amount": 1.0,
+      "precision_price": 1e-05,
+      "quote_min_size": "1",
+      "quote_max_size": "10000000",
+      "base_increment": "1",
+      "quote_increment": "0.00001"
+    },
+    {
+      "id": "GHST-USDC",
+      "precision_amount": 0.01,
+      "precision_price": 0.001,
+      "quote_min_size": "1",
+      "quote_max_size": "10000000",
+      "base_increment": "0.01",
+      "quote_increment": "0.001"
+    },
+    {
+      "id": "RLS-USDC",
+      "precision_amount": 1.0,
+      "precision_price": 1e-05,
+      "quote_min_size": "1",
+      "quote_max_size": "10000000",
+      "base_increment": "1",
+      "quote_increment": "0.00001"
+    },
+    {
+      "id": "BIGTIME-USDC",
+      "precision_amount": 1.0,
+      "precision_price": 1e-05,
+      "quote_min_size": "1",
+      "quote_max_size": "10000000",
+      "base_increment": "1",
+      "quote_increment": "0.00001"
+    },
+    {
+      "id": "NEWT-USDC",
+      "precision_amount": 0.01,
+      "precision_price": 0.0001,
+      "quote_min_size": "1",
+      "quote_max_size": "10000000",
+      "base_increment": "0.01",
+      "quote_increment": "0.0001"
+    },
+    {
+      "id": "BAND-USDC",
+      "precision_amount": 0.01,
+      "precision_price": 0.001,
+      "quote_min_size": "1",
+      "quote_max_size": "10000000",
+      "base_increment": "0.01",
+      "quote_increment": "0.001"
+    },
+    {
+      "id": "MATH-USDC",
+      "precision_amount": 0.1,
+      "precision_price": 0.0001,
+      "quote_min_size": "1",
+      "quote_max_size": "10000000",
+      "base_increment": "0.1",
+      "quote_increment": "0.0001"
+    },
+    {
+      "id": "NKN-USDC",
+      "precision_amount": 0.1,
+      "precision_price": 0.0001,
+      "quote_min_size": "1",
+      "quote_max_size": "10000000",
+      "base_increment": "0.1",
+      "quote_increment": "0.0001"
+    },
+    {
+      "id": "CAKE-USDC",
+      "precision_amount": 0.01,
+      "precision_price": 0.001,
+      "quote_min_size": "1",
+      "quote_max_size": "10000000",
+      "base_increment": "0.01",
+      "quote_increment": "0.001"
+    },
+    {
+      "id": "SD-USDC",
+      "precision_amount": 0.01,
+      "precision_price": 0.0001,
+      "quote_min_size": "1",
+      "quote_max_size": "10000000",
+      "base_increment": "0.01",
+      "quote_increment": "0.0001"
+    },
+    {
+      "id": "AUCTION-USDC",
+      "precision_amount": 0.001,
+      "precision_price": 0.01,
+      "quote_min_size": "1",
+      "quote_max_size": "10000000",
+      "base_increment": "0.001",
+      "quote_increment": "0.01"
+    },
+    {
+      "id": "NCT-USDC",
+      "precision_amount": 1.0,
+      "precision_price": 1e-05,
+      "quote_min_size": "1",
+      "quote_max_size": "10000000",
+      "base_increment": "1",
+      "quote_increment": "0.00001"
+    },
+    {
+      "id": "ZRX-USDC",
+      "precision_amount": 1e-05,
+      "precision_price": 1e-06,
+      "quote_min_size": "1",
+      "quote_max_size": "10000000",
+      "base_increment": "0.00001",
+      "quote_increment": "0.000001"
+    },
+    {
+      "id": "ILV-USDC",
+      "precision_amount": 0.0001,
+      "precision_price": 0.01,
+      "quote_min_size": "1",
+      "quote_max_size": "10000000",
+      "base_increment": "0.0001",
+      "quote_increment": "0.01"
+    },
+    {
+      "id": "PYR-USDC",
+      "precision_amount": 0.01,
+      "precision_price": 0.001,
+      "quote_min_size": "1",
+      "quote_max_size": "10000000",
+      "base_increment": "0.01",
+      "quote_increment": "0.001"
+    },
+    {
+      "id": "NOICE-USDC",
+      "precision_amount": 1.0,
+      "precision_price": 1e-07,
+      "quote_min_size": "1",
+      "quote_max_size": "10000000",
+      "base_increment": "1",
+      "quote_increment": "0.0000001"
+    },
+    {
+      "id": "BADGER-USDC",
+      "precision_amount": 0.001,
+      "precision_price": 0.0001,
+      "quote_min_size": "1",
+      "quote_max_size": "10000000",
+      "base_increment": "0.001",
+      "quote_increment": "0.0001"
+    },
+    {
+      "id": "ABT-USDC",
+      "precision_amount": 0.1,
+      "precision_price": 0.0001,
+      "quote_min_size": "1",
+      "quote_max_size": "10000000",
+      "base_increment": "0.1",
+      "quote_increment": "0.0001"
+    },
+    {
+      "id": "GMT-USDC",
+      "precision_amount": 0.01,
+      "precision_price": 0.0001,
+      "quote_min_size": "1",
+      "quote_max_size": "10000000",
+      "base_increment": "0.01",
+      "quote_increment": "0.0001"
+    },
+    {
+      "id": "LAYER-USDC",
+      "precision_amount": 0.01,
+      "precision_price": 0.0001,
+      "quote_min_size": "1",
+      "quote_max_size": "10000000",
+      "base_increment": "0.01",
+      "quote_increment": "0.0001"
+    },
+    {
+      "id": "REQ-USDC",
+      "precision_amount": 1.0,
+      "precision_price": 0.0001,
+      "quote_min_size": "1",
+      "quote_max_size": "10000000",
+      "base_increment": "1",
+      "quote_increment": "0.0001"
+    },
+    {
+      "id": "WMTX-USDC",
+      "precision_amount": 0.1,
+      "precision_price": 1e-05,
+      "quote_min_size": "1",
+      "quote_max_size": "10000000",
+      "base_increment": "0.1",
+      "quote_increment": "0.00001"
+    },
+    {
+      "id": "ALCX-USDC",
+      "precision_amount": 0.0001,
+      "precision_price": 0.01,
+      "quote_min_size": "1",
+      "quote_max_size": "10000000",
+      "base_increment": "0.0001",
+      "quote_increment": "0.01"
+    },
+    {
+      "id": "RLC-USDC",
+      "precision_amount": 0.01,
+      "precision_price": 0.0001,
+      "quote_min_size": "1",
+      "quote_max_size": "10000000",
+      "base_increment": "0.01",
+      "quote_increment": "0.0001"
+    },
+    {
+      "id": "DIMO-USDC",
+      "precision_amount": 0.1,
+      "precision_price": 1e-05,
+      "quote_min_size": "1",
+      "quote_max_size": "10000000",
+      "base_increment": "0.1",
+      "quote_increment": "0.00001"
+    },
+    {
+      "id": "B3-USDC",
+      "precision_amount": 1.0,
+      "precision_price": 1e-06,
+      "quote_min_size": "1",
+      "quote_max_size": "10000000",
+      "base_increment": "1",
+      "quote_increment": "0.000001"
+    },
+    {
+      "id": "RARE-USDC",
+      "precision_amount": 0.1,
+      "precision_price": 0.0001,
+      "quote_min_size": "1",
+      "quote_max_size": "10000000",
+      "base_increment": "0.1",
+      "quote_increment": "0.0001"
+    },
+    {
+      "id": "1INCH-USDC",
+      "precision_amount": 0.01,
+      "precision_price": 0.001,
+      "quote_min_size": "1",
+      "quote_max_size": "10000000",
+      "base_increment": "0.01",
+      "quote_increment": "0.001"
+    },
+    {
+      "id": "SHDW-USDC",
+      "precision_amount": 0.01,
+      "precision_price": 0.001,
+      "quote_min_size": "1",
+      "quote_max_size": "10000000",
+      "base_increment": "0.01",
+      "quote_increment": "0.001"
+    },
+    {
+      "id": "VARA-USDC",
+      "precision_amount": 1.0,
+      "precision_price": 1e-05,
+      "quote_min_size": "1",
+      "quote_max_size": "10000000",
+      "base_increment": "1",
+      "quote_increment": "0.00001"
+    },
+    {
+      "id": "CGLD-USDC",
+      "precision_amount": 0.01,
+      "precision_price": 0.0001,
+      "quote_min_size": "1",
+      "quote_max_size": "10000000",
+      "base_increment": "0.01",
+      "quote_increment": "0.0001"
+    },
+    {
+      "id": "LRC-USDC",
+      "precision_amount": 1e-06,
+      "precision_price": 0.0001,
+      "quote_min_size": "1",
+      "quote_max_size": "10000000",
+      "base_increment": "0.000001",
+      "quote_increment": "0.0001"
+    },
+    {
+      "id": "HONEY-USDC",
+      "precision_amount": 0.1,
+      "precision_price": 0.0001,
+      "quote_min_size": "1",
+      "quote_max_size": "10000000",
+      "base_increment": "0.1",
+      "quote_increment": "0.0001"
+    },
+    {
+      "id": "TNSR-USDC",
+      "precision_amount": 0.01,
+      "precision_price": 0.001,
+      "quote_min_size": "1",
+      "quote_max_size": "10000000",
+      "base_increment": "0.01",
+      "quote_increment": "0.001"
+    },
+    {
+      "id": "C98-USDC",
+      "precision_amount": 0.01,
+      "precision_price": 0.0001,
+      "quote_min_size": "1",
+      "quote_max_size": "10000000",
+      "base_increment": "0.01",
+      "quote_increment": "0.0001"
+    },
+    {
+      "id": "INV-USDC",
+      "precision_amount": 0.0001,
+      "precision_price": 0.01,
+      "quote_min_size": "1",
+      "quote_max_size": "10000000",
+      "base_increment": "0.0001",
+      "quote_increment": "0.01"
+    },
+    {
+      "id": "POLS-USDC",
+      "precision_amount": 0.01,
+      "precision_price": 0.0001,
+      "quote_min_size": "1",
+      "quote_max_size": "10000000",
+      "base_increment": "0.01",
+      "quote_increment": "0.0001"
+    },
+    {
+      "id": "DEEP-USDC",
+      "precision_amount": 1.0,
+      "precision_price": 1e-05,
+      "quote_min_size": "1",
+      "quote_max_size": "10000000",
+      "base_increment": "1",
+      "quote_increment": "0.00001"
+    },
+    {
+      "id": "FORT-USDC",
+      "precision_amount": 0.01,
+      "precision_price": 0.0001,
+      "quote_min_size": "1",
+      "quote_max_size": "10000000",
+      "base_increment": "0.01",
+      "quote_increment": "0.0001"
+    },
+    {
+      "id": "ARPA-USDC",
+      "precision_amount": 0.1,
+      "precision_price": 0.0001,
+      "quote_min_size": "1",
+      "quote_max_size": "10000000",
+      "base_increment": "0.1",
+      "quote_increment": "0.0001"
+    },
+    {
+      "id": "FARM-USDC",
+      "precision_amount": 0.001,
+      "precision_price": 0.01,
+      "quote_min_size": "1",
+      "quote_max_size": "10000000",
+      "base_increment": "0.001",
+      "quote_increment": "0.01"
+    },
+    {
+      "id": "MASK-USDC",
+      "precision_amount": 0.01,
+      "precision_price": 0.01,
+      "quote_min_size": "1",
+      "quote_max_size": "10000000",
+      "base_increment": "0.01",
+      "quote_increment": "0.01"
+    },
+    {
+      "id": "RSC-USDC",
+      "precision_amount": 0.01,
+      "precision_price": 0.0001,
+      "quote_min_size": "1",
+      "quote_max_size": "10000000",
+      "base_increment": "0.01",
+      "quote_increment": "0.0001"
+    },
+    {
+      "id": "ZETA-USDC",
+      "precision_amount": 0.1,
+      "precision_price": 0.0001,
+      "quote_min_size": "1",
+      "quote_max_size": "10000000",
+      "base_increment": "0.1",
+      "quote_increment": "0.0001"
+    },
+    {
+      "id": "STG-USDC",
+      "precision_amount": 0.1,
+      "precision_price": 0.0001,
+      "quote_min_size": "1",
+      "quote_max_size": "10000000",
+      "base_increment": "0.1",
+      "quote_increment": "0.0001"
+    },
+    {
+      "id": "SWELL-USDC",
+      "precision_amount": 1.0,
+      "precision_price": 1e-05,
+      "quote_min_size": "1",
+      "quote_max_size": "10000000",
+      "base_increment": "1",
+      "quote_increment": "0.00001"
+    },
+    {
+      "id": "VOXEL-USDC",
+      "precision_amount": 0.01,
+      "precision_price": 0.0001,
+      "quote_min_size": "1",
+      "quote_max_size": "10000000",
+      "base_increment": "0.01",
+      "quote_increment": "0.0001"
+    },
+    {
+      "id": "FOX-USDC",
+      "precision_amount": 0.1,
+      "precision_price": 1e-05,
+      "quote_min_size": "1",
+      "quote_max_size": "10000000",
+      "base_increment": "0.1",
+      "quote_increment": "0.00001"
+    },
+    {
+      "id": "BLZ-USDC",
+      "precision_amount": 0.1,
+      "precision_price": 0.0001,
+      "quote_min_size": "1",
+      "quote_max_size": "10000000",
+      "base_increment": "0.1",
+      "quote_increment": "0.0001"
+    },
+    {
+      "id": "SPELL-USDC",
+      "precision_amount": 1.0,
+      "precision_price": 1e-07,
+      "quote_min_size": "1",
+      "quote_max_size": "10000000",
+      "base_increment": "1",
+      "quote_increment": "0.0000001"
+    },
+    {
+      "id": "WCT-USDC",
+      "precision_amount": 0.1,
+      "precision_price": 0.0001,
+      "quote_min_size": "1",
+      "quote_max_size": "10000000",
+      "base_increment": "0.1",
+      "quote_increment": "0.0001"
+    },
+    {
+      "id": "OCEAN-USDC",
+      "precision_amount": 0.1,
+      "precision_price": 0.0001,
+      "quote_min_size": "1",
+      "quote_max_size": "10000000",
+      "base_increment": "0.1",
+      "quote_increment": "0.0001"
+    },
+    {
+      "id": "ANKR-USDC",
+      "precision_amount": 1.0,
+      "precision_price": 1e-05,
+      "quote_min_size": "1",
+      "quote_max_size": "10000000",
+      "base_increment": "1",
+      "quote_increment": "0.00001"
+    },
+    {
+      "id": "IDEX-USDC",
+      "precision_amount": 0.1,
+      "precision_price": 0.0001,
+      "quote_min_size": "1",
+      "quote_max_size": "10000000",
+      "base_increment": "0.1",
+      "quote_increment": "0.0001"
+    },
+    {
+      "id": "GODS-USDC",
+      "precision_amount": 0.01,
+      "precision_price": 1e-05,
+      "quote_min_size": "1",
+      "quote_max_size": "10000000",
+      "base_increment": "0.01",
+      "quote_increment": "0.00001"
+    },
+    {
+      "id": "USDS-USDC",
+      "precision_amount": 0.01,
+      "precision_price": 0.0001,
+      "quote_min_size": "1",
+      "quote_max_size": "10000000",
+      "base_increment": "0.01",
+      "quote_increment": "0.0001"
+    },
+    {
+      "id": "MSOL-USDC",
+      "precision_amount": 0.001,
+      "precision_price": 0.01,
+      "quote_min_size": "1",
+      "quote_max_size": "10000000",
+      "base_increment": "0.001",
+      "quote_increment": "0.01"
+    },
+    {
+      "id": "SHPING-USDC",
+      "precision_amount": 1.0,
+      "precision_price": 1e-06,
+      "quote_min_size": "1",
+      "quote_max_size": "10000000",
+      "base_increment": "1",
+      "quote_increment": "0.000001"
+    },
+    {
+      "id": "T-USDC",
+      "precision_amount": 1.0,
+      "precision_price": 1e-05,
+      "quote_min_size": "1",
+      "quote_max_size": "10000000",
+      "base_increment": "1",
+      "quote_increment": "0.00001"
+    },
+    {
+      "id": "FORTH-USDC",
+      "precision_amount": 0.001,
+      "precision_price": 0.0001,
+      "quote_min_size": "1",
+      "quote_max_size": "10000000",
+      "base_increment": "0.001",
+      "quote_increment": "0.0001"
+    },
+    {
+      "id": "CVC-USDC",
+      "precision_amount": 0.1,
+      "precision_price": 0.0001,
+      "quote_min_size": "1",
+      "quote_max_size": "10000000",
+      "base_increment": "0.1",
+      "quote_increment": "0.0001"
+    },
+    {
+      "id": "DRIFT-USDC",
+      "precision_amount": 0.01,
+      "precision_price": 0.001,
+      "quote_min_size": "1",
+      "quote_max_size": "10000000",
+      "base_increment": "0.01",
+      "quote_increment": "0.001"
+    },
+    {
+      "id": "00-USDC",
+      "precision_amount": 0.01,
+      "precision_price": 0.0001,
+      "quote_min_size": "1",
+      "quote_max_size": "10000000",
+      "base_increment": "0.01",
+      "quote_increment": "0.0001"
+    },
+    {
+      "id": "AUDD-USDC",
+      "precision_amount": 1.0,
+      "precision_price": 0.0001,
+      "quote_min_size": "1",
+      "quote_max_size": "10000000",
+      "base_increment": "1",
+      "quote_increment": "0.0001"
+    },
+    {
+      "id": "KERNEL-USDC",
+      "precision_amount": 0.01,
+      "precision_price": 0.0001,
+      "quote_min_size": "1",
+      "quote_max_size": "10000000",
+      "base_increment": "0.01",
+      "quote_increment": "0.0001"
+    },
+    {
+      "id": "FIDA-USDC",
+      "precision_amount": 0.01,
+      "precision_price": 0.0001,
+      "quote_min_size": "1",
+      "quote_max_size": "10000000",
+      "base_increment": "0.01",
+      "quote_increment": "0.0001"
+    },
+    {
+      "id": "FLOW-USDC",
+      "precision_amount": 0.001,
+      "precision_price": 0.001,
+      "quote_min_size": "1",
+      "quote_max_size": "10000000",
+      "base_increment": "0.001",
+      "quote_increment": "0.001"
+    },
+    {
+      "id": "ELA-USDC",
+      "precision_amount": 0.01,
+      "precision_price": 0.001,
+      "quote_min_size": "1",
+      "quote_max_size": "10000000",
+      "base_increment": "0.01",
+      "quote_increment": "0.001"
+    },
+    {
+      "id": "HOME-USDC",
+      "precision_amount": 1.0,
+      "precision_price": 1e-05,
+      "quote_min_size": "1",
+      "quote_max_size": "10000000",
+      "base_increment": "1",
+      "quote_increment": "0.00001"
+    },
+    {
+      "id": "DOLO-USDC",
+      "precision_amount": 0.1,
+      "precision_price": 1e-05,
+      "quote_min_size": "1",
+      "quote_max_size": "10000000",
+      "base_increment": "0.1",
+      "quote_increment": "0.00001"
+    },
+    {
+      "id": "FIS-USDC",
+      "precision_amount": 0.1,
+      "precision_price": 0.0001,
+      "quote_min_size": "1",
+      "quote_max_size": "10000000",
+      "base_increment": "0.1",
+      "quote_increment": "0.0001"
+    },
+    {
+      "id": "MPLX-USDC",
+      "precision_amount": 0.1,
+      "precision_price": 0.0001,
+      "quote_min_size": "1",
+      "quote_max_size": "10000000",
+      "base_increment": "0.1",
+      "quote_increment": "0.0001"
+    },
+    {
+      "id": "XSGD-USDC",
+      "precision_amount": 1.0,
+      "precision_price": 0.0001,
+      "quote_min_size": "1",
+      "quote_max_size": "10000000",
+      "base_increment": "1",
+      "quote_increment": "0.0001"
+    },
+    {
+      "id": "CELR-USDC",
+      "precision_amount": 1.0,
+      "precision_price": 1e-05,
+      "quote_min_size": "1",
+      "quote_max_size": "10000000",
+      "base_increment": "1",
+      "quote_increment": "0.00001"
+    },
+    {
+      "id": "PRCL-USDC",
+      "precision_amount": 0.1,
+      "precision_price": 0.0001,
+      "quote_min_size": "1",
+      "quote_max_size": "10000000",
+      "base_increment": "0.1",
+      "quote_increment": "0.0001"
+    },
+    {
+      "id": "PNUT-USDC",
+      "precision_amount": 0.01,
+      "precision_price": 0.0001,
+      "quote_min_size": "1",
+      "quote_max_size": "10000000",
+      "base_increment": "0.01",
+      "quote_increment": "0.0001"
+    },
+    {
+      "id": "QI-USDC",
+      "precision_amount": 1.0,
+      "precision_price": 1e-06,
+      "quote_min_size": "1",
+      "quote_max_size": "10000000",
+      "base_increment": "1",
+      "quote_increment": "0.000001"
+    },
+    {
+      "id": "AVT-USDC",
+      "precision_amount": 0.01,
+      "precision_price": 0.01,
+      "quote_min_size": "1",
+      "quote_max_size": "10000000",
+      "base_increment": "0.01",
+      "quote_increment": "0.01"
+    },
+    {
+      "id": "AUDIO-USDC",
+      "precision_amount": 0.1,
+      "precision_price": 0.0001,
+      "quote_min_size": "1",
+      "quote_max_size": "10000000",
+      "base_increment": "0.1",
+      "quote_increment": "0.0001"
+    },
+    {
+      "id": "MLN-USDC",
+      "precision_amount": 0.001,
+      "precision_price": 0.01,
+      "quote_min_size": "1",
+      "quote_max_size": "10000000",
+      "base_increment": "0.001",
+      "quote_increment": "0.01"
+    },
+    {
+      "id": "ERA-USDC",
+      "precision_amount": 0.01,
+      "precision_price": 0.0001,
+      "quote_min_size": "1",
+      "quote_max_size": "10000000",
+      "base_increment": "0.01",
+      "quote_increment": "0.0001"
+    },
+    {
+      "id": "ARKM-USDC",
+      "precision_amount": 0.01,
+      "precision_price": 0.001,
+      "quote_min_size": "1",
+      "quote_max_size": "10000000",
+      "base_increment": "0.01",
+      "quote_increment": "0.001"
+    },
+    {
+      "id": "HIGH-USDC",
+      "precision_amount": 0.01,
+      "precision_price": 0.001,
+      "quote_min_size": "1",
+      "quote_max_size": "10000000",
+      "base_increment": "0.01",
+      "quote_increment": "0.001"
+    },
+    {
+      "id": "ALEPH-USDC",
+      "precision_amount": 0.1,
+      "precision_price": 0.0001,
+      "quote_min_size": "1",
+      "quote_max_size": "10000000",
+      "base_increment": "0.1",
+      "quote_increment": "0.0001"
+    },
+    {
+      "id": "KARRAT-USDC",
+      "precision_amount": 0.01,
+      "precision_price": 0.0001,
+      "quote_min_size": "1",
+      "quote_max_size": "10000000",
+      "base_increment": "0.01",
+      "quote_increment": "0.0001"
+    },
+    {
+      "id": "SAFE-USDC",
+      "precision_amount": 0.01,
+      "precision_price": 0.0001,
+      "quote_min_size": "1",
+      "quote_max_size": "10000000",
+      "base_increment": "0.01",
+      "quote_increment": "0.0001"
+    },
+    {
+      "id": "BICO-USDC",
+      "precision_amount": 0.01,
+      "precision_price": 0.0001,
+      "quote_min_size": "1",
+      "quote_max_size": "10000000",
+      "base_increment": "0.01",
+      "quote_increment": "0.0001"
+    },
+    {
+      "id": "CORECHAIN-USDC",
+      "precision_amount": 0.01,
+      "precision_price": 0.0001,
+      "quote_min_size": "1",
+      "quote_max_size": "10000000",
+      "base_increment": "0.01",
+      "quote_increment": "0.0001"
+    },
+    {
+      "id": "GTC-USDC",
+      "precision_amount": 0.01,
+      "precision_price": 0.0001,
+      "quote_min_size": "1",
+      "quote_max_size": "10000000",
+      "base_increment": "0.01",
+      "quote_increment": "0.0001"
+    },
+    {
+      "id": "POWR-USDC",
+      "precision_amount": 0.1,
+      "precision_price": 0.0001,
+      "quote_min_size": "1",
+      "quote_max_size": "10000000",
+      "base_increment": "0.1",
+      "quote_increment": "0.0001"
+    },
+    {
+      "id": "HYPER-USDC",
+      "precision_amount": 0.1,
+      "precision_price": 0.0001,
+      "quote_min_size": "1",
+      "quote_max_size": "10000000",
+      "base_increment": "0.1",
+      "quote_increment": "0.0001"
+    },
+    {
+      "id": "ACX-USDC",
+      "precision_amount": 0.1,
+      "precision_price": 0.0001,
+      "quote_min_size": "1",
+      "quote_max_size": "10000000",
+      "base_increment": "0.1",
+      "quote_increment": "0.0001"
+    },
+    {
+      "id": "YB-USDC",
+      "precision_amount": 0.01,
+      "precision_price": 0.0001,
+      "quote_min_size": "1",
+      "quote_max_size": "10000000",
+      "base_increment": "0.01",
+      "quote_increment": "0.0001"
+    },
+    {
+      "id": "TOWNS-USDC",
+      "precision_amount": 0.1,
+      "precision_price": 1e-05,
+      "quote_min_size": "1",
+      "quote_max_size": "10000000",
+      "base_increment": "0.1",
+      "quote_increment": "0.00001"
+    },
+    {
+      "id": "TIME-USDC",
+      "precision_amount": 0.001,
+      "precision_price": 0.01,
+      "quote_min_size": "1",
+      "quote_max_size": "10000000",
+      "base_increment": "0.001",
+      "quote_increment": "0.01"
+    },
+    {
+      "id": "CTSI-USDC",
+      "precision_amount": 0.1,
+      "precision_price": 0.0001,
+      "quote_min_size": "1",
+      "quote_max_size": "10000000",
+      "base_increment": "0.1",
+      "quote_increment": "0.0001"
+    },
+    {
+      "id": "SUP-USDC",
+      "precision_amount": 0.1,
+      "precision_price": 1e-05,
+      "quote_min_size": "1",
+      "quote_max_size": "10000000",
+      "base_increment": "0.1",
+      "quote_increment": "0.00001"
+    },
+    {
+      "id": "TRU-USDC",
+      "precision_amount": 0.1,
+      "precision_price": 0.0001,
+      "quote_min_size": "1",
+      "quote_max_size": "10000000",
+      "base_increment": "0.1",
+      "quote_increment": "0.0001"
+    },
+    {
+      "id": "KRL-USDC",
+      "precision_amount": 0.1,
+      "precision_price": 0.0001,
+      "quote_min_size": "1",
+      "quote_max_size": "10000000",
+      "base_increment": "0.1",
+      "quote_increment": "0.0001"
+    },
+    {
+      "id": "LA-USDC",
+      "precision_amount": 0.1,
+      "precision_price": 0.0001,
+      "quote_min_size": "1",
+      "quote_max_size": "10000000",
+      "base_increment": "0.1",
+      "quote_increment": "0.0001"
+    },
+    {
+      "id": "OXT-USDC",
+      "precision_amount": 1.0,
+      "precision_price": 0.0001,
+      "quote_min_size": "1",
+      "quote_max_size": "10000000",
+      "base_increment": "1",
+      "quote_increment": "0.0001"
+    },
+    {
+      "id": "BLUR-USDC",
+      "precision_amount": 0.1,
+      "precision_price": 0.0001,
+      "quote_min_size": "1",
+      "quote_max_size": "10000000",
+      "base_increment": "0.1",
+      "quote_increment": "0.0001"
+    },
+    {
+      "id": "PUNDIX-USDC",
+      "precision_amount": 0.01,
+      "precision_price": 0.0001,
+      "quote_min_size": "1",
+      "quote_max_size": "10000000",
+      "base_increment": "0.01",
+      "quote_increment": "0.0001"
+    },
+    {
+      "id": "BNT-USDC",
+      "precision_amount": 1e-06,
+      "precision_price": 0.0001,
+      "quote_min_size": "1",
+      "quote_max_size": "10000000",
+      "base_increment": "0.000001",
+      "quote_increment": "0.0001"
+    },
+    {
+      "id": "MDT-USDC",
+      "precision_amount": 1.0,
+      "precision_price": 1e-05,
+      "quote_min_size": "1",
+      "quote_max_size": "10000000",
+      "base_increment": "1",
+      "quote_increment": "0.00001"
+    },
+    {
+      "id": "OSMO-USDC",
+      "precision_amount": 0.01,
+      "precision_price": 0.0001,
+      "quote_min_size": "1",
+      "quote_max_size": "10000000",
+      "base_increment": "0.01",
+      "quote_increment": "0.0001"
+    },
+    {
+      "id": "ALT-USDC",
+      "precision_amount": 1.0,
+      "precision_price": 1e-05,
+      "quote_min_size": "1",
+      "quote_max_size": "10000000",
+      "base_increment": "1",
+      "quote_increment": "0.00001"
+    },
+    {
+      "id": "GNO-USDC",
+      "precision_amount": 0.0001,
+      "precision_price": 0.01,
+      "quote_min_size": "1",
+      "quote_max_size": "10000000",
+      "base_increment": "0.0001",
+      "quote_increment": "0.01"
+    },
+    {
+      "id": "INDEX-USDC",
+      "precision_amount": 0.001,
+      "precision_price": 0.01,
+      "quote_min_size": "1",
+      "quote_max_size": "10000000",
+      "base_increment": "0.001",
+      "quote_increment": "0.01"
+    },
+    {
+      "id": "PLU-USDC",
+      "precision_amount": 0.01,
+      "precision_price": 1e-05,
+      "quote_min_size": "1",
+      "quote_max_size": "10000000",
+      "base_increment": "0.01",
+      "quote_increment": "0.00001"
+    },
+    {
+      "id": "BEAM-USDC",
+      "precision_amount": 1.0,
+      "precision_price": 1e-06,
+      "quote_min_size": "1",
+      "quote_max_size": "10000000",
+      "base_increment": "1",
+      "quote_increment": "0.000001"
+    },
+    {
+      "id": "2Z-USDC",
+      "precision_amount": 0.01,
+      "precision_price": 1e-05,
+      "quote_min_size": "1",
+      "quote_max_size": "10000000",
+      "base_increment": "0.01",
+      "quote_increment": "0.00001"
+    },
+    {
+      "id": "DBR-USDC",
+      "precision_amount": 1.0,
+      "precision_price": 1e-05,
+      "quote_min_size": "1",
+      "quote_max_size": "10000000",
+      "base_increment": "1",
+      "quote_increment": "0.00001"
+    },
+    {
+      "id": "G-USDC",
+      "precision_amount": 1.0,
+      "precision_price": 1e-05,
+      "quote_min_size": "1",
+      "quote_max_size": "10000000",
+      "base_increment": "1",
+      "quote_increment": "0.00001"
+    },
+    {
+      "id": "ZETACHAIN-USDC",
+      "precision_amount": 0.01,
+      "precision_price": 0.0001,
+      "quote_min_size": "1",
+      "quote_max_size": "10000000",
+      "base_increment": "0.01",
+      "quote_increment": "0.0001"
+    },
+    {
+      "id": "RAY-USDC",
+      "precision_amount": 0.01,
+      "precision_price": 0.0001,
+      "quote_min_size": "1",
+      "quote_max_size": "10000000",
+      "base_increment": "0.01",
+      "quote_increment": "0.0001"
+    },
+    {
+      "id": "RAD-USDC",
+      "precision_amount": 0.01,
+      "precision_price": 0.001,
+      "quote_min_size": "1",
+      "quote_max_size": "10000000",
+      "base_increment": "0.01",
+      "quote_increment": "0.001"
+    },
+    {
+      "id": "POND-USDC",
+      "precision_amount": 1.0,
+      "precision_price": 1e-05,
+      "quote_min_size": "1",
+      "quote_max_size": "10000000",
+      "base_increment": "1",
+      "quote_increment": "0.00001"
+    },
+    {
+      "id": "LSETH-USDC",
+      "precision_amount": 1e-05,
+      "precision_price": 0.01,
+      "quote_min_size": "1",
+      "quote_max_size": "10000000",
+      "base_increment": "0.00001",
+      "quote_increment": "0.01"
+    },
+    {
+      "id": "WAXL-USDC",
+      "precision_amount": 0.01,
+      "precision_price": 0.0001,
+      "quote_min_size": "1",
+      "quote_max_size": "10000000",
+      "base_increment": "0.01",
+      "quote_increment": "0.0001"
+    },
+    {
+      "id": "WAL-USDC",
+      "precision_amount": 0.1,
+      "precision_price": 1e-05,
+      "quote_min_size": "1",
+      "quote_max_size": "10000000",
+      "base_increment": "0.1",
+      "quote_increment": "0.00001"
+    },
+    {
+      "id": "PAX-USDC",
+      "precision_amount": 0.01,
+      "precision_price": 0.0001,
+      "quote_min_size": "1",
+      "quote_max_size": "10000000",
+      "base_increment": "0.01",
+      "quote_increment": "0.0001"
+    },
+    {
+      "id": "LMTS-USDC",
+      "precision_amount": 0.1,
+      "precision_price": 1e-05,
+      "quote_min_size": "1",
+      "quote_max_size": "10000000",
+      "base_increment": "0.1",
+      "quote_increment": "0.00001"
+    },
+    {
+      "id": "OPN-USDC",
+      "precision_amount": 0.01,
+      "precision_price": 0.0001,
+      "quote_min_size": "1",
+      "quote_max_size": "10000000",
+      "base_increment": "0.01",
+      "quote_increment": "0.0001"
+    }
+  ]
+}
