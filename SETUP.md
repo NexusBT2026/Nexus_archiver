@@ -39,8 +39,11 @@ Then open `config.json` and fill in your API keys for the exchanges you want to 
 | Coinbase | `coinbase_api_key`, `coinbase_api_key_secret` | |
 | Phemex | `phemex_api_key`, `phemex_api_secret` | |
 | Hyperliquid | `secret_key`, `account_address` | Wallet-based, no traditional API key |
+| **Yahoo Finance** | *(none)* | **No API keys required** — public stock/ETF data |
 
 > **Public OHLCV data does not require API keys.** The archiver fetches public market data endpoints — API keys are only needed if you want to extend this project to fetch private account data. You can leave all key fields as `YOUR_*_KEY` placeholders and the archiver will still run.
+>
+> **Yahoo Finance (YFinance)** provides free access to 2000+ US stocks, ETFs, and international equities without authentication. Enable in `config.json` with `"use_yfinance": true`.
 
 To disable specific exchanges entirely, set `"use_binance": false` (etc.) in `config.json`.
 

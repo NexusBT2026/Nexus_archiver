@@ -1,10 +1,11 @@
 # Nexus Archiver
 
-A standalone, open-source cryptocurrency OHLCV (Open, High, Low, Close, Volume) data archiving system that supports multiple exchanges and builds long-term historical datasets.
+A standalone, open-source OHLCV (Open, High, Low, Close, Volume) data archiving system that supports multiple cryptocurrency exchanges and traditional stock/ETF markets, building long-term historical datasets.
 
 ## Features
 
 - **Multi-Exchange Support**: Binance, Bybit, OKX, MEXC, Phemex, Hyperliquid, Coinbase, KuCoin, Bitget, Gate.io
+- **Stock & ETF Markets**: Yahoo Finance integration with 2000+ symbols (US stocks, ETFs, international equities)
 - **Incremental Updates**: Only fetches new candles, avoiding redundant API calls
 - **Smart Rate Limiting**: Built-in token bucket rate limiting to respect API limits
 - **Retention Management**: Configurable retention policies to prevent disk bloat
@@ -32,6 +33,7 @@ nexus_archiver/
 │   │   ├── kucoin_ohlcv_source.py
 │   │   ├── bitget_ohlcv_source.py
 │   │   ├── gateio_ohlcv_source.py
+│   │   ├── yfinance_ohlcv_source.py   # Yahoo Finance (stocks/ETFs)
 │   │   └── __init__.py
 │   ├── utils/                 # Utility modules
 │   │   └── token_bucket.py    # Rate limiting implementation

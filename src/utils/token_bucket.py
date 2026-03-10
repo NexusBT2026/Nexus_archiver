@@ -8,13 +8,12 @@ Updated with official Hyperliquid SDK rate limiting specs:
 - Refill Rate: 10 tokens per second
 - Automatic request delays when bucket is empty
 """
-from __future__ import annotations  # Python 3.8+ compatibility for built-in generic type hints
 import time
 import logging
 import json
 import hashlib
 from pathlib import Path
-from typing import Dict, Any, Optional, Callable, Tuple
+from typing import Dict, Any, Optional, Callable
 
 project_root = Path(__file__).parent.parent.parent
 
@@ -231,6 +230,7 @@ def create_exchange_buckets() -> Dict[str, TokenBucket]:
     - Bitget: 50ms rateLimit in CCXT = 20.00 requests/second (CCXT verified 2026-01-03)
     - Gate.io: 50ms rateLimit in CCXT = 20.00 requests/second (CCXT verified 2026-01-03)
     - MEXC: 50ms rateLimit in CCXT = 20.00 requests/second (CCXT verified 2026-01-03)
+    - YFinance: Free tier: ~2000 req/hour = ~0.55 req/sec (conservative)
     
     Returns:
         Dict mapping exchange names to TokenBucket instances with OFFICIAL limits
@@ -246,6 +246,7 @@ def create_exchange_buckets() -> Dict[str, TokenBucket]:
         'bitget': TokenBucket(100, 20.0, "Bitget", False, 60),                # CCXT: 50ms = 20.00 req/sec (VERIFIED 2026-01-03)
         'gateio': TokenBucket(100, 20.0, "Gateio", False, 60),                # CCXT: 50ms = 20.00 req/sec (VERIFIED 2026-01-03)
         'mexc': TokenBucket(100, 20.0, "MEXC", False, 60),                    # CCXT: 50ms = 20.00 req/sec (VERIFIED 2026-01-03)
+        'yfinance': TokenBucket(20, 2.0, "YFinance", False, 60),              # Free tier: ~2000 req/hour = ~0.55 req/sec (conservative)
     }
 
 

@@ -28,6 +28,7 @@ from src.data.coinbase_ohlcv_source import CoinbaseOHLCVDataSource
 from src.data.kucoin_ohlcv_source import KucoinOHLCVDataSource
 from src.data.bitget_ohlcv_source import BitgetOHLCVDataSource
 from src.data.gateio_ohlcv_source import GateioOHLCVDataSource
+from src.data.yfinance_ohlcv_source import YFinanceOHLCVDataSource
 
 
 class OHLCVArchiver:
@@ -50,6 +51,7 @@ class OHLCVArchiver:
             'kucoin': KucoinOHLCVDataSource,
             'bitget': BitgetOHLCVDataSource,
             'gateio': GateioOHLCVDataSource,
+            'yfinance': YFinanceOHLCVDataSource,
         }
     
     def _ensure_db_directory(self):

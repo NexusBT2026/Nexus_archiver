@@ -148,6 +148,29 @@ Coinbase complies with OFAC/UN sanctions programs universally.
 
 ### Hyperliquid — ⚠️ Could not fetch ToS (redirect to hyperfoundation.org blocked)
 
+**Known to restrict:**
+- United States (some products)
+- All OFAC-sanctioned territories
+
+**Known to allow:** Most countries — decentralized DEX model
+
+---
+
+### Yahoo Finance (YFinance) — ✅ Publicly Accessible Worldwide
+
+**No restrictions.** Yahoo Finance provides free, publicly accessible market data for stocks, ETFs, and international equities. No API keys, registration, or authentication required. Data is fetched from publicly available endpoints accessible from any country.
+
+**Supported markets:**
+- US stocks and ETFs (NYSE, NASDAQ, AMEX)
+- International equities (append exchange suffix: `.TO` Canada, `.L` London, `.T` Tokyo, etc.)
+- Major indices
+- Forex pairs
+- Commodities and futures
+
+**Data access:** Completely open — no geographic blocks, no rate limits beyond reasonable use (2 requests/second recommended).
+
+**Enable in config.json:** Set `"use_yfinance": true` and add symbols to `markets_info/yfinance/yfinance_symbols_data_bot.json`.
+
 Hyperliquid is a **decentralized perpetuals DEX** on its own L1 chain. The protocol is permissionless; the official frontend (`app.hyperliquid.xyz`) and API enforce US IP geo-blocks.
 
 **Known to restrict:** United States IPs at the API/frontend level

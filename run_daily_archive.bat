@@ -10,7 +10,7 @@ echo.
 cd /d "C:\Users\Warshawski\nexus_archiver"
 
 REM Activate conda environment and run archiver
-call C:\Users\Warshawski\anaconda3\Scripts\activate.bat nexus_archiver
+call C:\Users\Warshawski\anaconda3\Scripts\activate.bat Nexus
 
 python src\archiver\comprehensive_archiver.py
 

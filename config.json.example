@@ -33,5 +33,6 @@
   "use_bitget": true,
   "use_gateio": true,
   "use_mexc": true,
+  "use_yfinance": false,
   "numexpr_max_threads": null
 }

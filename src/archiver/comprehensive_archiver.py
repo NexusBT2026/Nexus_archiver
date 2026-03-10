@@ -31,6 +31,7 @@ from src.data.coinbase_ohlcv_source import CoinbaseOHLCVDataSource
 from src.data.kucoin_ohlcv_source import KucoinOHLCVDataSource
 from src.data.bitget_ohlcv_source import BitgetOHLCVDataSource
 from src.data.gateio_ohlcv_source import GateioOHLCVDataSource
+from src.data.yfinance_ohlcv_source import YFinanceOHLCVDataSource
 
 from src.utils.token_bucket import TokenBucket
 
@@ -65,6 +66,7 @@ class ComprehensiveArchiver:
     
     # Exchange priority order: Hyperliquid first (best data), then others
     EXCHANGE_PRIORITY = [
+        'yfinance',     # 20k candles - stocks/ETFs only
         'hyperliquid',  # 5k candles - BEST
         'mexc',         # 2k candles
         'binance',      # 1.5k candles
@@ -84,6 +86,7 @@ class ComprehensiveArchiver:
         
         # Exchange source mapping
         self.exchange_sources = {
+            'yfinance': YFinanceOHLCVDataSource,
             'binance': BinanceOHLCVDataSource,
             'bybit': BybitOHLCVDataSource,
             'okx': OKXOHLCVDataSource,
@@ -109,6 +112,7 @@ class ComprehensiveArchiver:
             'bitget': TokenBucket(100, 20.0, "Bitget", False, 60),                # CCXT: 50ms = 20.00 req/sec (VERIFIED 2026-01-03)
             'gateio': TokenBucket(100, 20.0, "Gateio", False, 60),                # CCXT: 50ms = 20.00 req/sec (VERIFIED 2026-01-03)
             'mexc': TokenBucket(100, 20.0, "MEXC", False, 60),                    # CCXT: 50ms = 20.00 req/sec (VERIFIED 2026-01-03)
+            'yfinance': TokenBucket(100, 2.0, "YFinance", False, 60),             # Free API: conservative 2 req/sec to avoid blocks
         }
     
     def _ensure_db_directory(self):
@@ -355,6 +359,10 @@ class ComprehensiveArchiver:
                     elif exchange_name.lower() in {'bybit', 'okx', 'bitget', 'gateio', 'mexc'}:
                         fetch_symbol = f"{symbol}/USDT"
 
+                    # YFinance uses raw stock symbols (no USDT suffix)
+                    elif exchange_name.lower() == 'yfinance':
+                        fetch_symbol = symbol
+
                     else:
                         # Fallback: prefer slash-form then USDT suffix
                         fetch_symbol = f"{symbol}/USDT:USDT"
@@ -382,6 +390,8 @@ class ComprehensiveArchiver:
                         candidates = [fetch_symbol, f"{symbol}USDT", f"{symbol}/USDT"]
                     elif exchange_name.lower() in {'bybit', 'okx', 'bitget', 'gateio', 'mexc'}:
                         candidates = [fetch_symbol, f"{symbol}/USDT:USDT", f"{symbol}/USDT", f"{symbol}USDT"]
+                    elif exchange_name.lower() == 'yfinance':
+                        candidates = [fetch_symbol]
                     else:
                         candidates = [f"{symbol}/USDT", f"{symbol}/USDC", f"{symbol}USDC", f"{symbol}/USDTM", f"{symbol}USDT", f"{symbol}USDTM"]
 
@@ -421,6 +431,8 @@ class ComprehensiveArchiver:
                             candidates = [f"{symbol}USDT", f"{symbol}/USDT"]
                         elif exchange_name.lower() in {'bybit', 'okx', 'bitget', 'gateio', 'mexc'}:
                             candidates = [f"{symbol}/USDT:USDT", f"{symbol}/USDT", f"{symbol}USDT"]
+                        elif exchange_name.lower() == 'yfinance':
+                            candidates = [symbol]
                         else:
                             candidates = [f"{symbol}/USDT", f"{symbol}/USDC", f"{symbol}USDC", f"{symbol}/USDTM", f"{symbol}USDT", f"{symbol}USDTM"]
 
@@ -647,6 +659,28 @@ async def run_comprehensive_archive():
     # Auto-discover ALL symbols
     print("🔍 Auto-discovering symbols from markets_info/...")
     all_exchange_symbols = archiver.discover_all_symbols()
+    
+    # Load main config.json to check which exchanges are enabled
+    main_config_path = Path(__file__).parent.parent.parent / "config.json"
+    enabled_exchanges = set()
+    if main_config_path.exists():
+        try:
+            with open(main_config_path, 'r', encoding='utf-8-sig') as f:
+                main_config = json.load(f)
+                for exchange in all_exchange_symbols.keys():
+                    use_flag = f"use_{exchange}"
+                    if main_config.get(use_flag, False):
+                        enabled_exchanges.add(exchange)
+        except Exception as e:
+            print(f"⚠️  Warning: Could not read {main_config_path}: {e}")
+            print(f"⚠️  Enabling all exchanges with symbols")
+            enabled_exchanges = set(all_exchange_symbols.keys())
+    else:
+        # If no config.json, enable all exchanges that have symbols
+        enabled_exchanges = set(all_exchange_symbols.keys())
+    
+    # Filter to only enabled exchanges
+    all_exchange_symbols = {ex: syms for ex, syms in all_exchange_symbols.items() if ex in enabled_exchanges}
     
     # CRITICAL: Sort exchanges by PRIORITY ORDER (Hyperliquid MUST be first!)
     exchange_symbols = {}
