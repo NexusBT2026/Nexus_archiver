@@ -318,11 +318,11 @@ class ComprehensiveArchiver:
                 # generate the fetch symbol using the exact rules from the
                 # pipeline (pipeline_BT_unified_async.py#L824-L926).
                 if ('/' not in symbol) and ('-' not in symbol):
-                    # Phemex: handle u-prefixes for small-cap tokens
+                    # Phemex: handle u-prefixes for small-cap tokens (based on actual market data)
                     if exchange_name.lower() == 'phemex':
                         u1000000_symbols = {'BABYDOGE', 'MOG'}
-                        u10000_symbols = set()
-                        u1000_symbols = {'BONK', 'CAT', 'CHEEMS', 'FLOKI', 'PEPE', 'RATS', 'SATS', 'SHIB', 'WHY', 'X', 'XEC'}
+                        u10000_symbols = set()  # No u10000 symbols exist in Phemex markets
+                        u1000_symbols = {'BONK', 'CAT', 'CHEEMS', 'FLOKI', 'PEPE', 'RATS', 'SATS', 'SHIB', 'WHY', 'XEC'}
 
                         if symbol in u1000000_symbols:
                             fetch_symbol = f'u1000000{symbol}USDT'
@@ -333,10 +333,10 @@ class ComprehensiveArchiver:
                         else:
                             fetch_symbol = f"{symbol}USDT"
 
-                    # Hyperliquid: some bases require a leading 'k'
+                    # Hyperliquid: some bases require a leading 'k' (based on actual market data)
                     elif exchange_name.lower() == 'hyperliquid':
                         def convert_to_hyperliquid_symbol(base_symbol):
-                            k_symbols = {'SHIB', 'PEPE', 'LUNC', 'BONK', 'FLOKI', 'DOGS', 'NEIRO'}
+                            k_symbols = {'BONK', 'FLOKI', 'LUNC', 'NEIRO', 'PEPE', 'SHIB'}
                             if base_symbol in k_symbols:
                                 return f'k{base_symbol}'
                             return base_symbol
@@ -347,17 +347,17 @@ class ComprehensiveArchiver:
                     elif exchange_name.lower() == 'coinbase':
                         fetch_symbol = f"{symbol}-USDC"
 
-                    # Binance spot uses simple USDT suffix
+                    # Binance spot uses USDC quote (not USDT)
                     elif exchange_name.lower() == 'binance':
-                        fetch_symbol = f"{symbol}/USDT"
+                        fetch_symbol = f"{symbol}/USDC"
 
-                    # KuCoin futures use USDTM suffix in pipeline
+                    # KuCoin futures use /USDT:USDT perpetual format
                     elif exchange_name.lower() == 'kucoin':
-                        fetch_symbol = f"{symbol}/USDT"
+                        fetch_symbol = f"{symbol}/USDT:USDT"
 
-                    # Perp-style exchanges use BASE/USDT:USDT format per pipeline
+                    # Perp-style exchanges use BASE/USDT:USDT format for perpetuals
                     elif exchange_name.lower() in {'bybit', 'okx', 'bitget', 'gateio', 'mexc'}:
-                        fetch_symbol = f"{symbol}/USDT"
+                        fetch_symbol = f"{symbol}/USDT:USDT"
 
                     # YFinance uses raw stock symbols (no USDT suffix)
                     elif exchange_name.lower() == 'yfinance':
@@ -381,13 +381,19 @@ class ComprehensiveArchiver:
 
                     # Build fallback candidate list (pipeline-first then previous candidates)
                     if exchange_name.lower() == 'phemex':
-                        candidates = [fetch_symbol, f"{symbol}USDT", f"u1000{symbol}USDT", f"u10000{symbol}USDT", f"u1000000{symbol}USDT"]
+                        # Only include u-prefix variations that actually exist in Phemex markets
+                        candidates = [fetch_symbol, f"{symbol}USDT"]
+                        # Add u-prefix candidates only for known small-cap tokens
+                        if symbol in {'BABYDOGE', 'MOG'}:
+                            candidates.append(f"u1000000{symbol}USDT")
+                        elif symbol in {'BONK', 'CAT', 'CHEEMS', 'FLOKI', 'PEPE', 'RATS', 'SATS', 'SHIB', 'WHY', 'XEC'}:
+                            candidates.append(f"u1000{symbol}USDT")
                     elif exchange_name.lower() == 'coinbase':
                         candidates = [fetch_symbol, f"{symbol}-USDC", f"{symbol}/USDC"]
                     elif exchange_name.lower() == 'binance':
-                        candidates = [fetch_symbol, f"{symbol}USDT", f"{symbol}/USDT"]
+                        candidates = [fetch_symbol, f"{symbol}/USDC", f"{symbol}USDC"]
                     elif exchange_name.lower() == 'kucoin':
-                        candidates = [fetch_symbol, f"{symbol}USDT", f"{symbol}/USDT"]
+                        candidates = [fetch_symbol, f"{symbol}/USDT:USDT", f"{symbol}/USDT", f"{symbol}USDT"]
                     elif exchange_name.lower() in {'bybit', 'okx', 'bitget', 'gateio', 'mexc'}:
                         candidates = [fetch_symbol, f"{symbol}/USDT:USDT", f"{symbol}/USDT", f"{symbol}USDT"]
                     elif exchange_name.lower() == 'yfinance':
@@ -422,13 +428,18 @@ class ComprehensiveArchiver:
                         # Candidate fallback list mirrors previous behavior but
                         # preserves the pipeline-first attempt above.
                         if exchange_name.lower() == 'phemex':
-                            candidates = [f"{symbol}USDT", f"u1000{symbol}USDT", f"u10000{symbol}USDT", f"u1000000{symbol}USDT"]
+                            # Only try u-prefix variations for known small-cap tokens
+                            candidates = [f"{symbol}USDT"]
+                            if symbol in {'BABYDOGE', 'MOG'}:
+                                candidates.append(f"u1000000{symbol}USDT")
+                            elif symbol in {'BONK', 'CAT', 'CHEEMS', 'FLOKI', 'PEPE', 'RATS', 'SATS', 'SHIB', 'WHY', 'XEC'}:
+                                candidates.append(f"u1000{symbol}USDT")
                         elif exchange_name.lower() == 'coinbase':
                             candidates = [f"{symbol}-USDC", f"{symbol}/USDC"]
                         elif exchange_name.lower() == 'binance':
-                            candidates = [f"{symbol}USDT", f"{symbol}/USDT"]
+                            candidates = [f"{symbol}/USDC", f"{symbol}USDC"]
                         elif exchange_name.lower() == 'kucoin':
-                            candidates = [f"{symbol}USDT", f"{symbol}/USDT"]
+                            candidates = [f"{symbol}/USDT:USDT", f"{symbol}/USDT", f"{symbol}USDT"]
                         elif exchange_name.lower() in {'bybit', 'okx', 'bitget', 'gateio', 'mexc'}:
                             candidates = [f"{symbol}/USDT:USDT", f"{symbol}/USDT", f"{symbol}USDT"]
                         elif exchange_name.lower() == 'yfinance':
