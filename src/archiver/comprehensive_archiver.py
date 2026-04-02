@@ -120,9 +120,13 @@ class ComprehensiveArchiver:
         Path(self.db_path).parent.mkdir(exist_ok=True)
     
     def _init_database(self):
-        """Initialize SQLite database."""
-        conn = sqlite3.connect(self.db_path)
+        """Initialize SQLite database with WAL mode for concurrent writes."""
+        conn = sqlite3.connect(self.db_path, timeout=30.0)
         cursor = conn.cursor()
+        
+        # Enable WAL mode for concurrent access (multiple archivers writing simultaneously)
+        cursor.execute("PRAGMA journal_mode=WAL")
+        cursor.execute("PRAGMA busy_timeout=30000")  # 30 second timeout
         
         # OHLCV data table
         cursor.execute("""
@@ -164,7 +168,7 @@ class ComprehensiveArchiver:
     
     def get_last_timestamp(self, exchange, symbol, timeframe):
         """Get last stored timestamp for incremental fetching."""
-        conn = sqlite3.connect(self.db_path)
+        conn = sqlite3.connect(self.db_path, timeout=30.0)
         cursor = conn.cursor()
         
         cursor.execute("""
@@ -182,7 +186,7 @@ class ComprehensiveArchiver:
         if not ohlcv_data:
             return 0
         
-        conn = sqlite3.connect(self.db_path)
+        conn = sqlite3.connect(self.db_path, timeout=30.0)
         cursor = conn.cursor()
         
         inserted = 0
@@ -231,7 +235,7 @@ class ComprehensiveArchiver:
         cutoff_date = datetime.now() - timedelta(days=retention_months * 30)
         cutoff_timestamp = int(cutoff_date.timestamp() * 1000)
         
-        conn = sqlite3.connect(self.db_path)
+        conn = sqlite3.connect(self.db_path, timeout=30.0)
         cursor = conn.cursor()
         
         cursor.execute("""
@@ -304,9 +308,9 @@ class ComprehensiveArchiver:
                     
                 return False
             
-            # Standard CCXT exchanges: Use exchange-specific max limit on first run
-            if is_first_run:
-                limit = self.MAX_LIMITS.get(exchange_name.lower(), 1000)
+            # Standard CCXT exchanges: Use exchange-specific max limit on EVERY run
+            # This ensures we get as much historical data as possible each time
+            limit = self.MAX_LIMITS.get(exchange_name.lower(), 1000)
             
             # CCXT-based data sources provide a sync `fetch_historical_data` method.
             # Call it in an executor to keep archive_symbol async-friendly.
@@ -594,7 +598,7 @@ class ComprehensiveArchiver:
     
     def get_statistics(self):
         """Get archive statistics."""
-        conn = sqlite3.connect(self.db_path)
+        conn = sqlite3.connect(self.db_path, timeout=30.0)
         cursor = conn.cursor()
         
         cursor.execute("""
@@ -617,7 +621,7 @@ class ComprehensiveArchiver:
     
     def export_to_csv(self, exchange, symbol, timeframe, output_path):
         """Export archived data to CSV for backtesting."""
-        conn = sqlite3.connect(self.db_path)
+        conn = sqlite3.connect(self.db_path, timeout=30.0)
         cursor = conn.cursor()
         
         cursor.execute("""

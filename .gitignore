@@ -62,6 +62,11 @@ markets_info/**/*_markets.json
 *.log
 error_log.txt
 
+# Exclude extra docs and tests used for myself
+docs/
+tests/
+
+
 # OS
 .DS_Store
 Thumbs.db
