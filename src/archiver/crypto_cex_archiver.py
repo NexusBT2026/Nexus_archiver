@@ -70,10 +70,17 @@ async def run_crypto_cex_archive():
     start_time = datetime.now()
     
     for exchange, symbols in exchange_symbols.items():
-        print(f"\n📡 {exchange} ({len(symbols)} symbols)...")
+        # Filter to timeframes supported by this exchange
+        source_class = archiver.exchange_sources.get(exchange)
+        if source_class and hasattr(source_class, 'get_available_timeframes'):
+            supported = set(source_class().get_available_timeframes())
+            exchange_tfs = [tf for tf in timeframes if tf in supported]
+        else:
+            exchange_tfs = timeframes
+        print(f"\n📡 {exchange} ({len(symbols)} symbols, {len(exchange_tfs)}/{len(timeframes)} timeframes)...")
         
         for i, symbol in enumerate(symbols, 1):
-            for timeframe in timeframes:
+            for timeframe in exchange_tfs:
                 success = await archiver.archive_symbol(exchange, symbol, timeframe, limit=fetch_limit)
                 completed += 1
                 if success:

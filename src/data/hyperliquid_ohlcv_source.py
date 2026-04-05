@@ -92,6 +92,10 @@ class HyperliquidOHLCVDataSource:
         # If all retries failed, return an empty DataFrame
         return pd.DataFrame()
 
+    def get_available_timeframes(self) -> list:
+        """Get list of supported timeframes for Hyperliquid."""
+        return ['1m', '5m', '15m', '30m', '1h', '2h', '4h', '12h', '1d']
+
 # Example usage:
 # Allow running this file directly without setting PYTHONPATH
 if __name__ == '__main__':

@@ -132,6 +132,10 @@ class PhemexOHLCVDataSource:
 
 
 
+    def get_available_timeframes(self) -> list:
+        """Get list of supported timeframes for Phemex."""
+        return list(self.timeframes.keys())
+
     def normalize_ohlcv(self, df: pd.DataFrame) -> pd.DataFrame:
         """
         Ensure DataFrame has correct columns and types for OHLCV data.
