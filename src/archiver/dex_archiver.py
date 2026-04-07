@@ -19,6 +19,7 @@ from datetime import datetime
 sys.path.insert(0, str(Path(__file__).parent.parent.parent))
 
 from src.archiver.comprehensive_archiver import ComprehensiveArchiver
+from src.data.market_refresher import refresh_all_markets
 import asyncio
 
 
@@ -32,6 +33,9 @@ async def run_dex_archive():
     print("=" * 80)
     print("📝 WAL mode enabled - safe for parallel execution\n")
     
+    # Refresh markets before discovery so symbol lists are current
+    refresh_all_markets(exchanges=['hyperliquid'])
+
     # Define DEX exchanges (currently only Hyperliquid, expand as needed)
     DEX_EXCHANGES = ['hyperliquid']
     

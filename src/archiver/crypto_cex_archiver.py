@@ -10,6 +10,7 @@ from datetime import datetime
 sys.path.insert(0, str(Path(__file__).parent.parent.parent))
 
 from src.archiver.comprehensive_archiver import ComprehensiveArchiver
+from src.data.market_refresher import refresh_all_markets
 import asyncio
 
 
@@ -26,6 +27,9 @@ async def run_crypto_cex_archive():
     # Define CEX exchanges only (exclude yfinance and hyperliquid)
     CEX_EXCHANGES = ['binance', 'bybit', 'okx', 'mexc', 'phemex', 'kucoin', 'bitget', 'gateio', 'coinbase']
     
+    # Refresh markets before discovery so symbol lists are current
+    refresh_all_markets(exchanges=CEX_EXCHANGES)
+
     # Auto-discover symbols
     print("🔍 Auto-discovering CEX symbols from markets_info/...")
     all_symbols = archiver.discover_all_symbols()

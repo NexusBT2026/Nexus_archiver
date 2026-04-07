@@ -5,7 +5,10 @@ A standalone, open-source OHLCV (Open, High, Low, Close, Volume) data archiving 
 ## Features
 
 - **Multi-Exchange Support**: Binance, Bybit, OKX, MEXC, Phemex, Hyperliquid, Coinbase, KuCoin, Bitget, Gate.io
-- **Stock & ETF Markets**: Yahoo Finance integration with 2000+ symbols (US stocks, ETFs, international equities)
+- **Stock & ETF Markets**: Yahoo Finance integration with 11,000+ symbols (US stocks, ETFs, mutual funds)
+- **Live Market Refresh**: Symbol lists are fetched from live exchange APIs at archiver startup — always current, no stale caches
+- **Per-Exchange Timeframe Filtering**: Each exchange only archives timeframes it actually supports — no more invalid timeframe errors
+- **Parallel Archiving**: Three independent archivers (CEX crypto, DEX/Hyperliquid, Stocks) run simultaneously
 - **Incremental Updates**: Only fetches new candles, avoiding redundant API calls
 - **Smart Rate Limiting**: Built-in token bucket rate limiting to respect API limits
 - **Retention Management**: Configurable retention policies to prevent disk bloat
@@ -20,6 +23,9 @@ nexus_archiver/
 ├── src/
 │   ├── archiver/              # Main archiver modules
 │   │   ├── comprehensive_archiver.py  # Archives ALL symbols from ALL exchanges
+│   │   ├── crypto_cex_archiver.py     # CEX crypto (Binance, Bybit, OKX, etc.)
+│   │   ├── dex_archiver.py            # DEX crypto (Hyperliquid)
+│   │   ├── stocks_archiver.py         # Stocks & ETFs (Yahoo Finance)
 │   │   ├── daily_ohlcv_archiver.py    # Daily incremental archiving
 │   │   └── __init__.py
 │   ├── data/                  # Exchange data source implementations
@@ -34,6 +40,7 @@ nexus_archiver/
 │   │   ├── bitget_ohlcv_source.py
 │   │   ├── gateio_ohlcv_source.py
 │   │   ├── yfinance_ohlcv_source.py   # Yahoo Finance (stocks/ETFs)
+│   │   ├── market_refresher.py        # Live market refresh at startup
 │   │   └── __init__.py
 │   ├── utils/                 # Utility modules
 │   │   └── token_bucket.py    # Rate limiting implementation
@@ -42,7 +49,18 @@ nexus_archiver/
 │   └── __init__.py
 ├── archived_data/             # Archived OHLCV data storage
 │   └── archive_config.json    # Archiver configuration
-├── markets_info/              # Market information (optional)
+├── markets_info/              # Market info — auto-refreshed at startup
+│   ├── binance/
+│   ├── bybit/
+│   ├── okx/
+│   ├── mexc/
+│   ├── bitget/
+│   ├── gateio/
+│   ├── kucoin/
+│   ├── phemex/
+│   ├── coinbase/
+│   ├── hyperliquid/
+│   └── yfinance/
 ├── config.json.example        # Example configuration file
 ├── requirements.txt           # Python dependencies
 └── README.md                  # This file
@@ -101,6 +119,40 @@ Edit `config.json` with your exchange API credentials. **Note**: For public OHLC
 
 ## Usage
 
+### Parallel Archiving (Recommended)
+
+Run all three archivers simultaneously for maximum throughput. Each writes to the same SQLite database safely via WAL mode.
+
+**Windows — open three terminals:**
+
+```bat
+# Terminal 1 — CEX crypto (Binance, Bybit, OKX, MEXC, Bitget, Gate.io, KuCoin, Phemex, Coinbase)
+run_crypto_cex_archive.bat
+
+# Terminal 2 — DEX (Hyperliquid perpetuals)
+run_dex_archive.bat
+
+# Terminal 3 — Stocks & ETFs (Yahoo Finance)
+run_stocks_archive.bat
+```
+
+At startup each archiver automatically refreshes symbol lists from live exchange APIs, so you always archive current markets — no need to manually update `markets_info/`.
+
+### Manual Refresh of Market Symbols
+
+To refresh all symbol lists without running the full archiver:
+
+```bash
+python -m src.data.market_refresher
+```
+
+Or refresh a specific exchange:
+
+```python
+from src.data.market_refresher import refresh_all_markets
+refresh_all_markets(exchanges=['bybit', 'kucoin'])
+```
+
 ### Daily Archiver (Incremental Updates)
 
 Run this daily to continuously accumulate historical data:
@@ -140,39 +192,6 @@ await archiver.archive_all_exchanges()
 
 # Or archive specific exchange
 await archiver.archive_exchange('binance')
-```
-
-### Standalone Script Example
-
-Create a script `run_archiver.py`:
-
-```python
-import asyncio
-from src.archiver.daily_ohlcv_archiver import OHLCVArchiver
-
-async def main():
-    archiver = OHLCVArchiver(db_path="archived_data/nexus_archive.db")
-    
-    # Archive major pairs on Binance
-    symbols = [
-        ('binance', 'BTC/USDT'),
-        ('binance', 'ETH/USDT'),
-        ('binance', 'SOL/USDT'),
-    ]
-    
-    timeframes = ['1h', '4h', '1d']
-    await archiver.archive_multiple(symbols, timeframes)
-    
-    print("Archiving completed!")
-
-if __name__ == "__main__":
-    asyncio.run(main())
-```
-
-Run the script:
-
-```bash
-python run_archiver.py
 ```
 
 ## Automation with Task Scheduler
@@ -226,11 +245,21 @@ Data is stored in SQLite database at `archived_data/nexus_archive.db`:
 
 ## API Rate Limiting
 
-Built-in token bucket rate limiting:
+Built-in token bucket rate limiting per exchange (verified rates):
 
-- **Hyperliquid**: 10 requests/second
-- **Other Exchanges**: 5 requests/second (configurable)
-- **Smart Caching**: Reduces API calls by 60-80%
+| Exchange | Rate | Notes |
+|---|---|---|
+| Binance | 10 req/s | |
+| Bybit | 10 req/s | |
+| OKX | 10 req/s | |
+| MEXC | 5 req/s | |
+| Bitget | 10 req/s | |
+| Gate.io | 10 req/s | |
+| KuCoin | 10 req/s | |
+| Phemex | 10 req/s | |
+| Coinbase | 29 req/s | |
+| Hyperliquid | 10 req/s | |
+| Yahoo Finance | 2 req/s | Free, no key required |
 
 ## Troubleshooting
 
@@ -251,9 +280,7 @@ python run_archiver.py
 
 ### Database Locked
 
-- Only one archiver instance should run at a time
-- Close any open database connections
-- Check for stale lock files
+The archive database uses WAL (Write-Ahead Logging) mode, so all three archivers can safely run in parallel without locking conflicts.
 
 ## Development
 

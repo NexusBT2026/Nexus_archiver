@@ -112,7 +112,7 @@ class ComprehensiveArchiver:
             'bitget': TokenBucket(100, 20.0, "Bitget", False, 60),                # CCXT: 50ms = 20.00 req/sec (VERIFIED 2026-01-03)
             'gateio': TokenBucket(100, 20.0, "Gateio", False, 60),                # CCXT: 50ms = 20.00 req/sec (VERIFIED 2026-01-03)
             'mexc': TokenBucket(100, 20.0, "MEXC", False, 60),                    # CCXT: 50ms = 20.00 req/sec (VERIFIED 2026-01-03)
-            'yfinance': TokenBucket(100, 2.0, "YFinance", False, 60),             # Free API: conservative 2 req/sec to avoid blocks
+            'yfinance': TokenBucket(100, 2.0, "YFinance", False, 60),             # No published limit; community tested 1 req/s safe; 2 req/s is near ceiling (curl_cffi TLS impersonation mitigates fingerprinting)
         }
     
     def _ensure_db_directory(self):
