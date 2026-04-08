@@ -99,6 +99,10 @@ class ComprehensiveArchiver:
             'gateio': GateioOHLCVDataSource,
         }
         
+        # Pre-instantiated source objects — one per exchange, reused across ALL archive_symbol calls.
+        # Avoids ccxt.load_markets() overhead (~2.8s per new CCXT instance) on every symbol/timeframe combo.
+        self.exchange_instances = {name: cls() for name, cls in self.exchange_sources.items()}
+
         # Token bucket rate limiters (exchange-specific)
         # NOTE: Hyperliquid uses 60% capacity (trading bot already using 40%)
         self.exchange_buckets = {
@@ -260,8 +264,8 @@ class ComprehensiveArchiver:
     
     async def archive_symbol(self, exchange_name, symbol, timeframe, limit=1000):
         """Archive single symbol with smart backfill and token bucket rate limiting."""
-        source_class = self.exchange_sources.get(exchange_name.lower())
-        if not source_class:
+        source = self.exchange_instances.get(exchange_name.lower())
+        if not source:
             return False
         
         # TOKEN BUCKET RATE LIMITING: Wait before consuming tokens
@@ -271,8 +275,6 @@ class ComprehensiveArchiver:
             if wait_time > 0:
                 await asyncio.sleep(wait_time)
             bucket.consume(tokens=1)
-        
-        source = source_class()
         last_timestamp = self.get_last_timestamp(exchange_name, symbol, timeframe)
         is_first_run = last_timestamp is None
         

@@ -78,9 +78,9 @@ async def run_dex_archive():
     
     for exchange, symbols in dex_symbols.items():
         # Filter to timeframes supported by this exchange
-        source_class = archiver.exchange_sources.get(exchange)
-        if source_class and hasattr(source_class, 'get_available_timeframes'):
-            supported = set(source_class().get_available_timeframes())
+        source = archiver.exchange_instances.get(exchange)
+        if source and hasattr(source, 'get_available_timeframes'):
+            supported = set(source.get_available_timeframes())
             exchange_tfs = [tf for tf in timeframes if tf in supported]
         else:
             exchange_tfs = timeframes

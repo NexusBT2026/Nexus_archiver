@@ -53,6 +53,8 @@ class OHLCVArchiver:
             'gateio': GateioOHLCVDataSource,
             'yfinance': YFinanceOHLCVDataSource,
         }
+        # Pre-instantiated source objects — reused across all archive_symbol calls
+        self.exchange_instances = {name: cls() for name, cls in self.exchange_sources.items()}
     
     def _ensure_db_directory(self):
         """Create archived_data directory if it doesn't exist."""
@@ -173,12 +175,10 @@ class OHLCVArchiver:
         print(f"\n📊 Archiving {exchange_name} {symbol} {timeframe}...")
         
         # Get exchange source
-        source_class = self.exchange_sources.get(exchange_name.lower())
-        if not source_class:
+        source = self.exchange_instances.get(exchange_name.lower())
+        if not source:
             print(f"❌ Unknown exchange: {exchange_name}")
             return
-        
-        source = source_class()
         
         # Get last timestamp for incremental fetch
         last_timestamp = self.get_last_timestamp(exchange_name, symbol, timeframe)
