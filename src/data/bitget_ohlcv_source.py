@@ -81,11 +81,13 @@ class BitgetOHLCVDataSource:
 
             logger.debug(f"Fetching Bitget data for {symbol} ({timeframe}), limit={limit}")
 
+            # Bitget rejects startTime for weekly/monthly candles (error 40017)
+            effective_since = None if timeframe in ('1w', '1M') else since
             ohlcv = self.exchange.fetch_ohlcv(
                 symbol=symbol,
                 timeframe=timeframe,
                 limit=min(limit, 1000),
-                since=since
+                since=effective_since
             )
 
             if not ohlcv:
